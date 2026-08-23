@@ -1,1093 +1,1351 @@
-# 📘 Microsoft 365 Copilot 통신·네트워크 엔지니어링 실무 마스터 커리큘럼
+# 📘 Work IQ & Microsoft 365 Copilot 통신·네트워크 실무 마스터 커리큘럼
 
-> **안내**: 이 마크다운 파일의 제목, 부제, 본문 설명 및 실무 프롬프트 내용을 자유롭게 편집/수정하실 수 있습니다.
-> 수정을 마치신 후 **'마크다운 내용 반영해줘'**라고 말씀하시면 HTML 웹 포털에 즉시 자동 빌드됩니다.
-
----
-
-## 🌐 Part 1: Copilot 기초 & 보안 아키텍처
-- **솔루션/앱**: M365 Copilot Core
-- **앱 키워드**: `copilot`
-
-### [Unit 01] 2026 통신 네트워크 패러다임: '작성 도우미'에서 '자율 에이전트'로
-- **배지(태그)**: PARADIGM SHIFT
-- **부제목**: 파편화된 인프라 데이터 맥락을 스스로 잇는 Work IQ 인텔리전스 계층의 도입
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="grid md:grid-cols-2 gap-6 my-4">
-                    <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-                        <div class="flex items-center space-x-2 mb-3">
-                            <span class="px-2.5 py-1 bg-rose-100 text-rose-700 rounded-full text-xs font-bold">Legacy (2024~2025)</span>
-                        </div>
-                        <h4 class="text-lg font-bold text-slate-900 mb-2">단편적 텍스트 작성 보조</h4>
-                        <p class="text-sm text-slate-600 leading-relaxed">사용자의 단발성 질문에만 의존하며, 사내 로그·메일·규정집 간의 맥락을 연결하지 못하는 '맥락맹(Context Blindness)' 한계</p>
-                    </div>
-                    <div class="p-6 bg-indigo-50/70 rounded-2xl border border-indigo-200 shadow-sm">
-                        <div class="flex items-center space-x-2 mb-3">
-                            <span class="px-2.5 py-1 bg-indigo-600 text-white rounded-full text-xs font-bold">2026 Paradigm</span>
-                        </div>
-                        <h4 class="text-lg font-bold text-indigo-950 mb-2">Work IQ 기반 능동적 에이전트</h4>
-                        <p class="text-sm text-slate-700 leading-relaxed">사내 Graph 데이터와 결합하여 NOC 인시던트 분석부터 엔지니어 리소스 재배치까지 다단계 엔지니어링 과업을 자율 수행</p>
-                    </div>
-                </div>
-```
+> **KT 코어/전송망 AX 엔지니어링 실무 교육 공식 마스터 교재** (4 Chapters / 52 Hands-on Units / 7 Hours)
 
 ---
 
-### [Unit 02] 3대 차세대 AI 모델 전략적 선택 기준 (Model Toggling)
-- **배지(태그)**: MODEL ARCHITECTURE
-- **부제목**: 통신 실무 난이도와 작업 기간에 따른 최적의 파운데이션 모델 수동 스위칭
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="grid md:grid-cols-3 gap-5 my-4">
-                    <div class="p-5 bg-white rounded-2xl border border-blue-200 shadow-sm border-t-4 border-t-blue-600 flex flex-col justify-between">
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-xs px-2.5 py-0.5 bg-blue-100 text-blue-800 font-bold rounded">심층 추론 / 수치 연산</span>
-                                <span class="text-xl">🧠</span>
-                            </div>
-                            <h3 class="text-2xl font-bold text-slate-900 mb-1">GPT-5.6</h3>
-                            <p class="text-xs text-slate-400 mb-3 font-mono">Multi-Step Deep Reasoning</p>
-                            <div class="p-3 bg-slate-50 rounded-xl text-xs text-slate-700 border border-slate-200 mb-2 leading-relaxed">
-                                <strong class="text-blue-900">권장 시나리오:</strong><br>
-                                • 5G SA Core 패킷 지연 원인 분석<br>
-                                • 복합 라우팅 메트릭 계산<br>
-                                • 대규모 침해사고 Root Cause Analysis
-                            </div>
-                        </div>
-                        <div class="text-xs text-blue-700 font-semibold mt-2">✓ 정밀도 99.8% 논리 검증</div>
-                    </div>
-                    <div class="p-5 bg-white rounded-2xl border border-emerald-200 shadow-sm border-t-4 border-t-emerald-600 flex flex-col justify-between">
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-xs px-2.5 py-0.5 bg-emerald-100 text-emerald-800 font-bold rounded">초고속 에이전틱 실행</span>
-                                <span class="text-xl">⚡</span>
-                            </div>
-                            <h3 class="text-2xl font-bold text-slate-900 mb-1">Claude Sonnet 5</h3>
-                            <p class="text-xs text-slate-400 mb-3 font-mono">Fast Agentic Execution</p>
-                            <div class="p-3 bg-slate-50 rounded-xl text-xs text-slate-700 border border-slate-200 mb-2 leading-relaxed">
-                                <strong class="text-emerald-900">권장 시나리오:</strong><br>
-                                • 실시간 회의 기반 장비 교체 플랜<br>
-                                • 긴급 고객사 장애 안내문 및 메일 회신<br>
-                                • 코드 생성 및 다이어그램 즉시 변환
-                            </div>
-                        </div>
-                        <div class="text-xs text-emerald-700 font-semibold mt-2">✓ 실시간 인터랙션 최적화</div>
-                    </div>
-                    <div class="p-5 bg-white rounded-2xl border border-purple-200 shadow-sm border-t-4 border-t-purple-600 flex flex-col justify-between">
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-xs px-2.5 py-0.5 bg-purple-100 text-purple-800 font-bold rounded">지속성 / 장기 프로젝트</span>
-                                <span class="text-xl">⏳</span>
-                            </div>
-                            <h3 class="text-2xl font-bold text-slate-900 mb-1">Claude Fable 5</h3>
-                            <p class="text-xs text-slate-400 mb-3 font-mono">Long-term Persistence</p>
-                            <div class="p-3 bg-slate-50 rounded-xl text-xs text-slate-700 border border-slate-200 mb-2 leading-relaxed">
-                                <strong class="text-purple-900">권장 시나리오:</strong><br>
-                                • 6G 인프라 마이그레이션 프로젝트<br>
-                                • 전국 국사 전수 조사 및 수개월 일정 검증<br>
-                                • 분기별 망 품질 기술 백서 편찬
-                            </div>
-                        </div>
-                        <div class="text-xs text-purple-700 font-semibold mt-2">✓ 수동 활성화 (Persistence 모드)</div>
-                    </div>
-                </div>
-```
-
----
-
-### [Unit 03] 엔지니어를 위한 5대 클라우드 시너지 & Copilot Cowork
-- **배지(태그)**: CLOUD SYNERGY
-- **부제목**: 데이터 사일로를 파괴하고 앱 간 경계를 허무는 통합 엔지니어링 에코시스템
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="grid grid-cols-2 md:grid-cols-5 gap-3 my-4">
-                    <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
-                        <div class="text-indigo-600 font-bold text-base mb-1 font-mono">01</div>
-                        <h5 class="text-xs font-bold text-slate-900 mb-1">클라우드 컨텍스트</h5>
-                        <p class="text-xs text-slate-600 leading-tight">OneDrive 연동 데이터로 10만 행 수식 오류 10초 디버깅</p>
-                    </div>
-                    <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
-                        <div class="text-indigo-600 font-bold text-base mb-1 font-mono">02</div>
-                        <h5 class="text-xs font-bold text-slate-900 mb-1">타임머신 버전 Diff</h5>
-                        <p class="text-xs text-slate-600 leading-tight">지난주 설정값과 현재 버전의 라우팅 차이점 자동 역추적</p>
-                    </div>
-                    <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
-                        <div class="text-indigo-600 font-bold text-base mb-1 font-mono">03</div>
-                        <h5 class="text-xs font-bold text-slate-900 mb-1">앱 사일로 파괴</h5>
-                        <p class="text-xs text-slate-600 leading-tight">Excel 로그 + Teams 채팅 + Outlook 메일 결합 보고서</p>
-                    </div>
-                    <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
-                        <div class="text-indigo-600 font-bold text-base mb-1 font-mono">04</div>
-                        <h5 class="text-xs font-bold text-slate-900 mb-1">제로트러스트 상속</h5>
-                        <p class="text-xs text-slate-600 leading-tight">Entra ID ACL 기반 인가된 사내 통신 데이터만 안전 검색</p>
-                    </div>
-                    <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
-                        <div class="text-indigo-600 font-bold text-base mb-1 font-mono">05</div>
-                        <h5 class="text-xs font-bold text-slate-900 mb-1">샌드박스 연산</h5>
-                        <p class="text-xs text-slate-600 leading-tight">로컬 패키지 충돌 없는 Azure Cloud 격리 샌드박스 연산</p>
-                    </div>
-                </div>
-                <div class="p-4 bg-gradient-to-r from-indigo-900 to-purple-900 text-white rounded-2xl shadow-md flex items-center justify-between">
-                    <div>
-                        <div class="flex items-center space-x-2">
-                            <span class="px-2 py-0.5 bg-indigo-500/40 text-indigo-200 text-xs font-bold rounded">2026 NEW</span>
-                            <h4 class="text-base font-bold">Copilot Cowork & Cowork Skills</h4>
-                        </div>
-                        <p class="text-xs text-indigo-100 mt-1">사용자가 목표(Task)를 정의하면 여러 에이전트가 단일 흐름 안에서 앱을 넘나들며 최종 완성본을 도출하고, 성공한 장애대응 루틴을 '코워크 스킬'로 패키징하여 전사 공유합니다.</p>
-                    </div>
-                    <div class="text-3xl pl-4">🤝</div>
-                </div>
-```
-
----
-
-### [Unit 04] M365 Copilot 기술 아키텍처 & 엔터프라이즈 데이터 보호(EDP)
-- **배지(태그)**: GRAPH & EDP
-- **부제목**: 사내 보안 경계를 한 치도 벗어나지 않는 안전한 그라운딩(Grounding) 파이프라인
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="p-5 bg-white rounded-2xl border border-slate-200 shadow-sm mb-4">
-                    <div class="grid grid-cols-4 gap-3 text-center text-xs font-mono">
-                        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
-                            <div class="text-indigo-600 font-bold">1. User Prompt</div>
-                            <div class="text-[10px] text-slate-500 mt-1">자연어 질의</div>
-                        </div>
-                        <div class="p-3 bg-indigo-50 rounded-xl border border-indigo-200">
-                            <div class="text-indigo-900 font-bold">2. Microsoft Graph</div>
-                            <div class="text-[10px] text-slate-500 mt-1">Work IQ + Entra ID ACL</div>
-                        </div>
-                        <div class="p-3 bg-blue-50 rounded-xl border border-blue-200">
-                            <div class="text-blue-900 font-bold">3. LLM Engine</div>
-                            <div class="text-[10px] text-slate-500 mt-1">GPT-5.6 / Sonnet 5</div>
-                        </div>
-                        <div class="p-3 bg-emerald-50 rounded-xl border border-emerald-200">
-                            <div class="text-emerald-900 font-bold">4. Response & App</div>
-                            <div class="text-[10px] text-slate-500 mt-1">Purview DLP 필터링</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid md:grid-cols-3 gap-4 text-left">
-                    <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
-                        <div class="text-indigo-600 font-bold text-xs mb-1">🔒 테넌트 완벽 격리</div>
-                        <p class="text-xs text-slate-600">고객 데이터는 암호화된 전용 테넌트 내에 격리되며 타 테넌트와 절대 혼합되지 않습니다.</p>
-                    </div>
-                    <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
-                        <div class="text-indigo-600 font-bold text-xs mb-1">🛡️ Zero-Data Retention</div>
-                        <p class="text-xs text-slate-600">기업 프롬프트와 응답 내용은 공용 LLM 기초 모델의 추가 학습에 영구히 배제됩니다.</p>
-                    </div>
-                    <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
-                        <div class="text-indigo-600 font-bold text-xs mb-1">🔑 권한 자동 상속</div>
-                        <p class="text-xs text-slate-600">사용자가 평소 접근 권한을 가진 사내 파일과 이메일만 그라운딩 소스로 활용됩니다.</p>
-                    </div>
-                </div>
-```
-
----
-
-### [Unit 05] [MS Learn 공식] 통신 엔지니어링 프롬프트 4대 요소 (GCS-E)
-- **배지(태그)**: PROMPT FRAMEWORK
-- **부제목**: 환각을 제거하고 1회 요청으로 즉시 현업에 투입 가능한 고품질 산출물 도출
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="grid md:grid-cols-2 gap-4 my-3 text-left">
-                    <div class="p-4 bg-white rounded-xl border border-blue-200 shadow-sm">
-                        <div class="flex items-center space-x-2 mb-1">
-                            <span class="w-5 h-5 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center font-bold text-xs">1</span>
-                            <h4 class="text-sm font-bold text-slate-900">Goal (목표 명시)</h4>
-                        </div>
-                        <p class="text-xs text-slate-600 mb-2">수행해야 할 구체적인 엔지니어링 과업 정의</p>
-                        <div class="p-2.5 bg-slate-900 text-blue-300 rounded-lg text-xs font-mono">
-                            "5G SA Core의 GTP-U 패킷 지연 원인을 규명하고 조치안을 도출해줘."
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white rounded-xl border border-emerald-200 shadow-sm">
-                        <div class="flex items-center space-x-2 mb-1">
-                            <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs">2</span>
-                            <h4 class="text-sm font-bold text-slate-900">Context (배경 및 청중)</h4>
-                        </div>
-                        <p class="text-xs text-slate-600 mb-2">작업이 필요한 이유와 최종 보고 대상</p>
-                        <div class="p-2.5 bg-slate-900 text-emerald-300 rounded-lg text-xs font-mono">
-                            "NOC 레벨-1 긴급 인시던트 발생 상황이며, 보고 대상은 기술본부장임."
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white rounded-xl border border-purple-200 shadow-sm">
-                        <div class="flex items-center space-x-2 mb-1">
-                            <span class="w-5 h-5 rounded-full bg-purple-100 text-purple-800 flex items-center justify-center font-bold text-xs">3</span>
-                            <h4 class="text-sm font-bold text-slate-900">Source (참조 출처 지정)</h4>
-                        </div>
-                        <p class="text-xs text-slate-600 mb-2">참조할 사내 파일/스레드 슬래시(/) 지정</p>
-                        <div class="p-2.5 bg-slate-900 text-purple-300 rounded-lg text-xs font-mono">
-                            "/[5G_Core_Syslog.csv]와 /[Ericsson_Core_Guide.pdf]를 대조해."
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white rounded-xl border border-amber-200 shadow-sm">
-                        <div class="flex items-center space-x-2 mb-1">
-                            <span class="w-5 h-5 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-xs">4</span>
-                            <h4 class="text-sm font-bold text-slate-900">Expectations (형식 & 제약)</h4>
-                        </div>
-                        <p class="text-xs text-slate-600 mb-2">출력 형식, 약어 풀이, 필수 섹션 명시</p>
-                        <div class="p-2.5 bg-slate-900 text-amber-300 rounded-lg text-xs font-mono">
-                            "최상단에 [Review Summary]를 두고, DU/RU 약어는 풀어서 표로 작성해."
-                        </div>
-                    </div>
-                </div>
-```
-
----
-
-### [Unit 06] [보안 딥다이브] Work vs Web 모드 & 쿼리 변환(Query Transformation)
-- **배지(태그)**: SECURITY DEEP DIVE
-- **부제목**: 사내 망 기밀 데이터 유출을 원천 차단하면서 글로벌 최신 표준을 조회하는 원리
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="grid md:grid-cols-2 gap-5 my-3 text-left">
-                    <div class="p-5 bg-white rounded-2xl border border-slate-200 shadow-sm border-t-4 border-t-indigo-600">
-                        <div class="flex items-center justify-between mb-2">
-                            <h4 class="text-sm font-bold text-indigo-900">🏢 Work 모드 (사내 전용)</h4>
-                            <span class="text-xs px-2 py-0.5 bg-indigo-100 text-indigo-700 font-bold rounded">Internal Only</span>
-                        </div>
-                        <ul class="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
-                            <li>사내 SharePoint, Teams, Outlook, 국사 자산 데이터 전용 검색</li>
-                            <li>외부 웹 검색 완전 차단으로 완벽한 제로 트러스트 기밀 보장</li>
-                            <li><strong>주요 용도:</strong> 사내 장애 일지, IP 할당표, 표준 운영 절차서(SOP)</li>
-                        </ul>
-                    </div>
-                    <div class="p-5 bg-white rounded-2xl border border-slate-200 shadow-sm border-t-4 border-t-blue-600">
-                        <div class="flex items-center justify-between mb-2">
-                            <h4 class="text-sm font-bold text-blue-900">🌐 Web 모드 (외부 실시간)</h4>
-                            <span class="text-xs px-2 py-0.5 bg-blue-100 text-blue-700 font-bold rounded">Bing Grounding</span>
-                        </div>
-                        <ul class="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
-                            <li>최신 3GPP 릴리즈, IETF RFC 표준, 글로벌 벤더 공식 매뉴얼 검색</li>
-                            <li>상용 LLM과 달리 2026년 최신 보안 취약점(CVE) 실시간 반영</li>
-                            <li><strong>주요 용도:</strong> 신규 펌웨어 패치, 글로벌 RFC 표준 스펙 대조</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 text-left">
-                    <div class="text-xs font-bold text-slate-900 mb-1">🛡️ 쿼리 변환(Query Transformation) 보안 메커니즘</div>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        사내 호스트명(예: <code class="text-indigo-600 font-mono bg-indigo-50 px-1 py-0.5 rounded">KR-SEL-DC1-RTR01</code>)이 포함된 질문이 외부 검색 엔진으로 전송될 때, Copilot은 내부 식별자를 제거하고 <code class="text-indigo-600 font-mono bg-indigo-50 px-1 py-0.5 rounded">"Cisco ASR 9000 BGP EVPN flap issue"</code>와 같이 일반화된 기술 쿼리로 자동 변환하여 외부로 전송합니다.
-                    </p>
-                </div>
-```
-
----
-
-## 🌐 Part 2: Excel 트래픽 인텔리전스 & 분석가 도구
-- **솔루션/앱**: Microsoft Excel
-- **앱 키워드**: `excel`
-
-### [Unit 07] [2026 신기능] 대규모 에러 로그 정제 & 트리밍 참조 (.:.)
-- **배지(태그)**: TRIMMING REFERENCES
-- **부제목**: 수만 행의 Syslog 연산 속도를 혁신하는 =COPILOT 수식과 TRIMRANGE 최적화
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="p-4 bg-slate-950 text-emerald-400 rounded-2xl border border-emerald-800 shadow-md mb-4 text-left font-mono">
-                    <div class="text-xs text-slate-400 mb-1">Excel 2026 공식 Copilot 수식:</div>
-                    <div class="text-sm font-bold bg-slate-900 p-3 rounded-lg border border-slate-800">
-                        =COPILOT("B열의 에러 로그에서 [Critical] 레벨만 분류하고 N/A 값은 이전 유효 데이터로 채워줘", B7.:.E50000)
-                    </div>
-                </div>
-                <div class="grid md:grid-cols-2 gap-4 text-left">
-                    <div class="p-5 bg-white rounded-2xl border border-emerald-200 shadow-sm">
-                        <h4 class="text-sm font-bold text-emerald-900 mb-2">⚡ 트리밍 참조 (.:.)의 파괴력</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed">
-                            콜론 앞뒤에 마침표를 찍는 <strong>트리밍 참조(Trimming References)</strong>는 비어있는 불필요한 셀을 제외하고 실제 유효 데이터 범위만 자동 바운딩하여 계산 리소스를 90% 절감합니다.
-                        </p>
-                    </div>
-                    <div class="p-5 bg-white rounded-2xl border border-emerald-200 shadow-sm">
-                        <h4 class="text-sm font-bold text-emerald-900 mb-2">🚀 excel.new 즉시 환경 구축</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed">
-                            브라우저 주소창에 <code class="text-emerald-700 font-mono bg-emerald-50 px-1 py-0.5 rounded">excel.new</code>를 입력하여 즉시 웹 기반 Excel Copilot 환경을 띄우고, 원클릭 표 서식화(<code class="text-emerald-700 font-mono bg-emerald-50 px-1 py-0.5 rounded">Ctrl + T</code>)를 통해 AI 분석을 개시합니다.
-                        </p>
-                    </div>
-                </div>
-```
-
----
-
-### [Unit 08] 트래픽 피벗 집계 및 피벗 자동 새로고침(Pivot Auto Refresh)
-- **배지(태그)**: AUTO REFRESH
-- **부제목**: 실시간 데이터 유입 시 대시보드를 수작업 없이 자동으로 갱신하는 스마트 피벗
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="grid md:grid-cols-2 gap-5 my-3 text-left">
-                    <div class="p-5 bg-white rounded-2xl border border-slate-200 shadow-sm">
-                        <h4 class="text-sm font-bold text-slate-900 mb-2">Top Talker 피벗 집계 프롬프트</h4>
-                        <div class="p-3 bg-slate-900 text-emerald-300 rounded-xl text-xs font-mono mb-3">
-                            "방화벽 트래픽 로그에서 총 Byte_Size를 기준으로 상위 10개 출발지 IP(Src_IP)를 추출하고, 프로토콜별 비율을 보여주는 피벗 테이블을 생성해줘."
-                        </div>
-                        <ul class="text-xs text-slate-600 space-y-1">
-                            <li>✓ 복잡한 SUMIFS/XLOOKUP 수식 자동 생성</li>
-                            <li>✓ 비정상 포트(Port Scan) 다중 조건 필터링</li>
-                        </ul>
-                    </div>
-                    <div class="p-5 bg-emerald-50/70 rounded-2xl border border-emerald-200 shadow-sm">
-                        <h4 class="text-sm font-bold text-emerald-950 mb-2">🔄 Pivot Auto Refresh 메커니즘</h4>
-                        <p class="text-xs text-slate-700 mb-3 leading-relaxed">
-                            새로운 Syslog 행이 지속적으로 추가될 때 수동으로 '새로 고침'을 누를 필요 없이 대시보드와 차트가 실시간 동기화되는 2026 자동화 기능입니다.
-                        </p>
-                        <div class="p-2.5 bg-emerald-600 text-white rounded-lg text-xs font-mono">
-                            "원본 데이터 추가 시 실시간 반영되도록 Pivot Auto Refresh를 활성화해줘."
-                        </div>
-                    </div>
-                </div>
-```
-
----
-
-### [Unit 09] [핵심] 분석가 도구(Analyst Agent)와 Python in Excel 메커니즘
-- **배지(태그)**: ANALYST AGENT
-- **부제목**: 자연어 질의를 수신한 AI가 Azure 격리 샌드박스에서 파이썬 코드를 자동 생성·실행
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="p-4 bg-white rounded-2xl border border-slate-200 shadow-sm mb-4">
-                    <div class="grid grid-cols-4 gap-2 text-center text-xs font-mono">
-                        <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200">
-                            <div class="text-slate-800 font-bold">1. 자연어 질문</div>
-                            <div class="text-[9px] text-slate-500 mt-0.5">"이상 트래픽 찾아줘"</div>
-                        </div>
-                        <div class="p-2.5 bg-emerald-50 rounded-lg border border-emerald-200">
-                            <div class="text-emerald-900 font-bold">2. Analyst Agent</div>
-                            <div class="text-[9px] text-slate-500 mt-0.5">스키마 자율 파악</div>
-                        </div>
-                        <div class="p-2.5 bg-blue-50 rounded-lg border border-blue-200">
-                            <div class="text-blue-900 font-bold">3. Azure Python</div>
-                            <div class="text-[9px] text-slate-500 mt-0.5">pandas, seaborn 연산</div>
-                        </div>
-                        <div class="p-2.5 bg-emerald-100 rounded-lg border border-emerald-300">
-                            <div class="text-emerald-950 font-bold">4. Excel 출력</div>
-                            <div class="text-[9px] text-slate-500 mt-0.5">인터랙티브 히트맵</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid md:grid-cols-3 gap-3 text-left">
-                    <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
-                        <h5 class="text-xs font-bold text-slate-900 mb-1">🐍 표준 파이썬 라이브러리</h5>
-                        <p class="text-xs text-slate-600">pandas, numpy, statsmodels, scikit-learn 기본 내장</p>
-                    </div>
-                    <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
-                        <h5 class="text-xs font-bold text-slate-900 mb-1">🛡️ 무결점 클라우드 격리</h5>
-                        <p class="text-xs text-slate-600">로컬 자원을 쓰지 않고 Azure 클라우드에서 안전 실행</p>
-                    </div>
-                    <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
-                        <h5 class="text-xs font-bold text-slate-900 mb-1">📊 고급 시각화 엔진</h5>
-                        <p class="text-xs text-slate-600">matplotlib & seaborn 기반 복합 이상치 히트맵 도출</p>
-                    </div>
-                </div>
-```
-
----
-
-### [Unit 10] 통신망 이상 트래픽(DDoS/스파이크) 탐지 & 히트맵 시각화
-- **배지(태그)**: ANOMALY DETECTION
-- **부제목**: 통계적 Z-Score(3σ) 및 머신러닝 Isolation Forest 알고리즘 기반 이상 징후 자동 포착
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="grid md:grid-cols-2 gap-5 my-3 text-left">
-                    <div class="p-5 bg-white rounded-2xl border border-emerald-200 shadow-sm">
-                        <h4 class="text-sm font-bold text-emerald-900 mb-2">1. 통계적 Z-Score 모델 (3σ 기준)</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-3">
-                            시간당 평균 패킷량 대비 <strong>3표준편차(Z-Score > 3)</strong>를 초과하는 급격한 스파이크 트래픽을 감지하여 DDoS 및 포트 스캔을 판별합니다.
-                        </p>
-                        <div class="p-2 bg-slate-900 text-emerald-300 rounded text-xs font-mono">
-                            "Packet_Count가 3σ를 초과하는 행에 조건부 서식을 씌워줘."
-                        </div>
-                    </div>
-                    <div class="p-5 bg-white rounded-2xl border border-blue-200 shadow-sm">
-                        <h4 class="text-sm font-bold text-blue-900 mb-2">2. ML 기반 Isolation Forest & 히트맵</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-3">
-                            패킷 수, 바이트 크기, 접속 빈도의 다차원 데이터를 클러스터링하여 잠복형 비정상 세션을 탐지하고 시간대별 부하 히트맵으로 시각화합니다.
-                        </p>
-                        <div class="p-2 bg-slate-900 text-blue-300 rounded text-xs font-mono">
-                            "Isolation Forest를 적용해 시간대별 부하 히트맵을 그려줘."
-                        </div>
-                    </div>
-                </div>
-```
-
----
-
-### [Unit 11] 5G/인프라 대역폭 사이징 및 시계열 예측(Forecasting)
-- **배지(태그)**: CAPACITY PLANNING
-- **부제목**: 과거 12개월 부하 추세선(Trendline) 모델링으로 회선 증설 임계치(80%) 도달 시점 예측
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="p-5 bg-white rounded-2xl border border-emerald-200 shadow-sm text-left my-2">
-                    <h4 class="text-sm font-bold text-emerald-900 mb-2">시계열 대역폭 예측 프롬프트</h4>
-                    <div class="p-3 bg-slate-900 text-emerald-300 rounded-xl text-xs font-mono mb-4">
-                        "최근 12개월간의 기지국 백홀 트래픽 시계열 데이터를 분석해서, 향후 6개월간의 트래픽 증가 추세를 예측해줘. 회선 가용 용량의 80% 임계치에 도달하는 예상 월을 산출하고 증설 필요 대역폭을 제안해줘."
-                    </div>
-                    <div class="grid grid-cols-3 gap-3 text-xs text-slate-700">
-                        <div class="p-3 bg-emerald-50 rounded-lg border border-emerald-200">
-                            <strong class="text-emerald-950">① 지수 평활법 모델링</strong><br>
-                            계절성 및 피크 트래픽 패턴 반영
-                        </div>
-                        <div class="p-3 bg-emerald-50 rounded-lg border border-emerald-200">
-                            <strong class="text-emerald-950">② 80% Threshold 계산</strong><br>
-                            선제적 회선 증설 예산 수립
-                        </div>
-                        <div class="p-3 bg-emerald-50 rounded-lg border border-emerald-200">
-                            <strong class="text-emerald-950">③ C-Level 요약 카드</strong><br>
-                            인사이트 지표 1장 요약 도출
-                        </div>
-                    </div>
-                </div>
-```
-
----
-
-### [Unit 12] 🧪 [실습 1] 5만 건 방화벽 로그 이상치 분석 & 대시보드 구축
-- **배지(태그)**: HANDS-ON LAB 1
-- **부제목**: 소요시간: 20분 | 트리밍 참조 + Python 이상치 탐지 + Pivot Auto Refresh 완주
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="grid md:grid-cols-3 gap-4 text-left my-2">
-                    <div class="p-4 bg-white rounded-2xl border border-blue-200 shadow-sm border-t-4 border-t-blue-600">
-                        <div class="text-xs font-bold text-blue-800 mb-1">Step 1. 전처리 & 트리밍</div>
-                        <div class="p-2 bg-slate-900 text-blue-300 rounded text-[11px] font-mono mb-2">
-                            =COPILOT("Byte_Size를 기반으로 MB 계산열 추가", B7.:.F50000)
-                        </div>
-                        <p class="text-xs text-slate-600">Ctrl+T 표 변환 후 트리밍 참조로 고속 연산</p>
-                    </div>
-                    <div class="p-4 bg-white rounded-2xl border border-emerald-200 shadow-sm border-t-4 border-t-emerald-600">
-                        <div class="text-xs font-bold text-emerald-800 mb-1">Step 2. Python 이상치 탐지</div>
-                        <div class="p-2 bg-slate-900 text-emerald-300 rounded text-[11px] font-mono mb-2">
-                            "Packet_Count가 3σ 초과하는 구간과 Top 5 IP 추출"
-                        </div>
-                        <p class="text-xs text-slate-600">Analyst Agent를 통한 Z-Score 탐지</p>
-                    </div>
-                    <div class="p-4 bg-white rounded-2xl border border-purple-200 shadow-sm border-t-4 border-t-purple-600">
-                        <div class="text-xs font-bold text-purple-800 mb-1">Step 3. 히트맵 & Auto Refresh</div>
-                        <div class="p-2 bg-slate-900 text-purple-300 rounded text-[11px] font-mono mb-2">
-                            "시간대별 부하 히트맵을 생성하고 Pivot Auto Refresh 켜줘"
-                        </div>
-                        <p class="text-xs text-slate-600">실시간 반영 관제 대시보드 완성</p>
-                    </div>
-                </div>
-```
-
----
-
-## 🌐 Part 3: 다이어그램 코드화 (Mermaid & Excalidraw)
-- **솔루션/앱**: Diagrams as Code
-- **앱 키워드**: `diagrams`
-
-### [Unit 13] Diagrams as Code: 텍스트 기반 다이어그램 생성 원리
-- **배지(태그)**: DIAGRAMS AS CODE
-- **부제목**: 마우스 드로잉 도구의 한계를 극복하고 프롬프트 입력으로 아키텍처를 코드화
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="grid md:grid-cols-2 gap-6 my-4 text-left">
-                    <div class="p-5 bg-white rounded-2xl border border-rose-200 shadow-sm border-l-4 border-l-rose-500">
-                        <h4 class="text-sm font-bold text-rose-900 mb-2">❌ 레거시 수동 드로잉 (Visio 등)</h4>
-                        <ul class="text-xs text-slate-600 space-y-2 list-disc list-inside">
-                            <li>장비 추가 시마다 선과 라벨을 마우스로 일일이 재배치</li>
-                            <li>Git 등 형상관리 불가 (바이너리 파일 저장)</li>
-                            <li>AI 자동 수정 및 다이어그램 Diff 확인 불가능</li>
-                        </ul>
-                    </div>
-                    <div class="p-5 bg-teal-50/60 rounded-2xl border border-teal-200 shadow-sm border-l-4 border-l-teal-600">
-                        <h4 class="text-sm font-bold text-teal-950 mb-2">✅ 2026 Diagrams as Code (Mermaid)</h4>
-                        <ul class="text-xs text-slate-700 space-y-2 list-disc list-inside">
-                            <li>자연어 프롬프트 1회로 L2/L3 및 시퀀스 다이어그램 생성</li>
-                            <li>텍스트 코드이므로 Git 커밋 및 변경점 추적 용이</li>
-                            <li>Excalidraw와 연동하여 벡터 그래픽으로 즉시 변환</li>
-                        </ul>
-                    </div>
-                </div>
-```
-
----
-
-### [Unit 14] Copilot을 활용한 Mermaid 통신 토폴로지 코드 생성
-- **배지(태그)**: MERMAID GENERATION
-- **부제목**: 5G Core 인터페이스, BGP 세션, 방화벽 이중화 경로를 정확한 문법으로 자동 작성
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="p-5 bg-white rounded-2xl border border-teal-200 shadow-sm text-left my-2">
-                    <div class="text-xs text-slate-500 font-mono mb-1">5G SA Core 토폴로지 프롬프트:</div>
-                    <div class="p-2.5 bg-slate-900 text-teal-300 rounded-lg text-xs font-mono mb-3">
-                        "gNodeB 기지국과 5G SA Core(AMF, SMF, UPF) 및 Data Network(DN) 간의 연결 구조를 N2, N3, N4, N6 인터페이스 라벨을 포함하여 Mermaid flowchart LR 문법으로 작성해줘."
-                    </div>
-                    <div class="p-3 bg-slate-950 text-emerald-300 rounded-lg text-xs font-mono">
-                        flowchart LR<br>
-                        &nbsp;&nbsp;gNB["gNodeB (5G RAN)"] -- N2 (Control) --> AMF["5G Core AMF"]<br>
-                        &nbsp;&nbsp;gNB -- N3 (User Plane) --> UPF["5G Core UPF"]<br>
-                        &nbsp;&nbsp;AMF &lt;--&gt; SMF["5G Core SMF"]<br>
-                        &nbsp;&nbsp;SMF -- N4 --> UPF<br>
-                        &nbsp;&nbsp;UPF -- N6 --> DN["Data Network (Internet)"]
-                    </div>
-                </div>
-```
-
----
-
-### [Unit 15] Excalidraw 원클릭 연동 (Mermaid to Diagram)
-- **배지(태그)**: VECTOR VISUALS
-- **부제목**: 텍스트 코드를 발표 자료 및 기술 백서에 삽입 가능한 고품질 모던 벡터 그래픽으로 전환
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="grid md:grid-cols-3 gap-4 my-4 text-left">
-                    <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
-                        <div class="text-teal-600 font-bold text-xs mb-1">Step 1. 코드 복사</div>
-                        <p class="text-xs text-slate-600">Copilot이 생성한 Mermaid 블록 전체를 원클릭 복사</p>
-                    </div>
-                    <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
-                        <div class="text-teal-600 font-bold text-xs mb-1">Step 2. Excalidraw 삽입</div>
-                        <p class="text-xs text-slate-600">Excalidraw의 <code class="text-teal-700 font-mono bg-teal-50 px-1 py-0.5 rounded">Mermaid to Diagram</code> 메뉴에 코드 붙여넣기</p>
-                    </div>
-                    <div class="p-4 bg-teal-50 rounded-xl border border-teal-200 shadow-sm">
-                        <div class="text-teal-900 font-bold text-xs mb-1">Step 3. 모던 벡터 커스텀</div>
-                        <p class="text-xs text-slate-700">사내 컬러 팔레트 적용 후 고해상도 SVG/PNG로 내보내기</p>
-                    </div>
-                </div>
-```
-
----
-
-### [Unit 16] 🧪 [실습 2] 5G SA Core & 하이브리드 BGP 이중화 다이어그램 제작
-- **배지(태그)**: HANDS-ON LAB 2
-- **부제목**: 소요시간: 15분 | 프롬프트 작성 ➔ Mermaid 생성 ➔ Excalidraw 벡터 변환
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="p-5 bg-white rounded-2xl border border-teal-200 shadow-sm text-left my-2">
-                    <h4 class="text-sm font-bold text-teal-950 mb-2">실습 프롬프트 (Role-Context-Constraint)</h4>
-                    <div class="p-3 bg-slate-900 text-teal-300 rounded-xl text-xs font-mono mb-4 leading-relaxed">
-                        "너는 시니어 네트워크 아키텍트야. 본사 IDC(Core SW, Active/Standby FW, 서브넷 10.10.0.0/16)와 AWS 간 Direct Connect 10G(Primary) 및 IPsec VPN(Secondary) BGP 이중화 경로를 나타내는 Mermaid flowchart TD 코드를 작성해줘. 서브넷 대역과 포트 번호도 라벨에 포함해줘."
-                    </div>
-                    <div class="p-3 bg-teal-50 rounded-xl text-xs text-teal-900 border border-teal-200">
-                        ✓ <strong>최종 결과물:</strong> 완성된 Mermaid 코드를 Excalidraw에 붙여넣어 제안서용 벡터 아키텍처 다이어그램 렌더링 완료.
-                    </div>
-                </div>
-```
-
----
-
-## 🌐 Part 4: Outlook 스마트 이메일 & 캘린더 위임
-- **솔루션/앱**: Microsoft Outlook
-- **앱 키워드**: `outlook`
-
-### [Unit 17] NOC Level-1 인시던트 요약 & 첨부파일 목록화 (Attachment Listing)
-- **배지(태그)**: ATTACHMENT LISTING
-- **부제목**: 밤새 누적된 수천 건의 알람 메일 스레드에서 조치 필요 항목 및 벤더 매뉴얼 즉시 추출
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="p-5 bg-white rounded-2xl border border-blue-200 shadow-sm text-left my-2">
-                    <h4 class="text-sm font-bold text-blue-900 mb-2">NOC 긴급 알람 요약 프롬프트</h4>
-                    <div class="p-3 bg-slate-900 text-blue-300 rounded-xl text-xs font-mono mb-4 leading-relaxed">
-                        "지난 밤 발생한 [NOC Level-1 Incident Alarms] 메일 스레드를 분석해줘. 특히 [5G Standalone Core Latency]와 관련된 Action Required 항목만 추출하고, 삼성/에릭슨 등 벤더사별 장비 매뉴얼이 포함된 <strong>첨부 파일 목록(Attachment List)</strong>을 표 형태로 정리해줘."
-                    </div>
-                    <div class="grid grid-cols-2 gap-4 text-xs text-slate-700">
-                        <div class="p-3 bg-blue-50 rounded-lg border border-blue-200">
-                            <strong class="text-blue-950">Action Required 자동 선별</strong><br>
-                            수동 탐색 없이 즉각적인 조치 대상 우선순위화
-                        </div>
-                        <div class="p-3 bg-blue-50 rounded-lg border border-blue-200">
-                            <strong class="text-blue-950">Email Attachment Listing</strong><br>
-                            수십 개 메일에 분산된 매뉴얼 PDF를 표로 단일화
-                        </div>
-                    </div>
-                </div>
-```
-
----
-
-### [Unit 18] [2026 신기능] 포괄적 크로스 컨텍스트 추론 (Cross-Context Reasoning)
-- **배지(태그)**: CROSS-CONTEXT
-- **부제목**: 단일 메일을 넘어 전체 편지함, 캘린더, 모임 기록, 사내 Graph 데이터를 통틀어 종합 질의
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="p-5 bg-white rounded-2xl border border-blue-200 shadow-sm text-left my-2 border-t-4 border-t-blue-600">
-                    <h4 class="text-sm font-bold text-blue-900 mb-2">복합 엔지니어링 지시 예시</h4>
-                    <div class="p-3 bg-slate-900 text-blue-300 rounded-xl text-xs font-mono mb-4 leading-relaxed">
-                        "내 매니저가 보낸 읽지 않은 메일 중 [코어망 장애]와 관련된 메일을 전부 플래그 표시하고, 내일 예정된 Post-Mortem 회의 참석자들의 최근 회신 의견을 3줄로 브리핑해줘."
-                    </div>
-                    <div class="grid grid-cols-3 gap-3 text-xs text-slate-700">
-                        <div class="p-2.5 bg-blue-50 rounded border border-blue-200">
-                            <strong class="text-slate-900">① 전체 메일함 탐색</strong><br>단일 스레드 한계 극복
-                        </div>
-                        <div class="p-2.5 bg-blue-50 rounded border border-blue-200">
-                            <strong class="text-slate-900">② 캘린더 일정 대조</strong><br>모임 참석자 매핑
-                        </div>
-                        <div class="p-2.5 bg-blue-50 rounded border border-blue-200">
-                            <strong class="text-slate-900">③ 선제적 플래그 설정</strong><br>우선순위 자율 정리
-                        </div>
-                    </div>
-                </div>
-```
-
----
-
-### [Unit 19] [@Calendar Agent] 현장 엔지니어 리소스 재배치 & 위임 관리
-- **배지(태그)**: CALENDAR DELEGATION
-- **부제목**: 일정 충돌 실시간 감지 ➔ 자동 일정 재조정 + 회의실 대신 예약 + 집중 시간(Focus Time) 보호
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="p-5 bg-white rounded-2xl border border-blue-200 shadow-sm text-left my-2">
-                    <h4 class="text-sm font-bold text-blue-900 mb-2">캘린더 에이전트 프롬프트</h4>
-                    <div class="p-3 bg-slate-900 text-blue-300 rounded-xl text-xs font-mono mb-4 leading-relaxed">
-                        "@Calendar Agent, 현재 [수도권 동부 국사] 현장 점검 엔지니어들의 일정 충돌을 확인해줘. 긴급 장애 복구를 위해 오늘 오후 미팅을 내일 오전으로 자동 재설정하고, 참석자들에게 변경 사유와 Teams 영상 Recap 링크를 포함한 알림을 발송해줘."
-                    </div>
-                    <div class="grid grid-cols-3 gap-3 text-xs text-slate-700">
-                        <div class="p-3 bg-blue-50 rounded-lg border border-blue-200">
-                            <strong class="text-blue-950">충돌 자동 해결</strong><br>참석자 빈 시간 자동 탐색
-                        </div>
-                        <div class="p-3 bg-blue-50 rounded-lg border border-blue-200">
-                            <strong class="text-blue-950">회의실 자율 예약</strong><br>장비 구비된 회의실 선점
-                        </div>
-                        <div class="p-3 bg-blue-50 rounded-lg border border-blue-200">
-                            <strong class="text-blue-950">Focus Time 보호</strong><br>점검 작업 시간 블록 유지
-                        </div>
-                    </div>
-                </div>
-```
-
----
-
-### [Unit 20] 🧪 [실습 3] 글로벌 TAC 메일 분석 ➔ 고객사 회신 ➔ 캘린더 위임 예약
-- **배지(태그)**: HANDS-ON LAB 3
-- **부제목**: 소요시간: 15분 | 영문 스레드 요약 + C-Level 안내문 작성 + @Calendar Agent 예약
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="grid md:grid-cols-2 gap-5 my-2 text-left">
-                    <div class="p-4 bg-white rounded-2xl border border-blue-200 shadow-sm">
-                        <div class="text-xs font-bold text-blue-700 mb-1">Step 1. 영문 TAC 요약 & 고객사 회신</div>
-                        <p class="text-xs text-slate-600 mb-2 leading-relaxed">
-                            20여 통의 영문 TAC 메일에서 하드웨어 결함 원인을 요약하고, 고객사 임원 발송용 정중한 회신문 작성.
-                        </p>
-                        <div class="p-2 bg-slate-900 text-blue-300 rounded text-[11px] font-mono">
-                            "원인, RMA 조치 결과, 향후 펌웨어 패치 일정을 포함해 회신문 작성해줘."
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white rounded-2xl border border-blue-200 shadow-sm">
-                        <div class="text-xs font-bold text-blue-700 mb-1">Step 2. @Calendar Agent 회의 예약</div>
-                        <p class="text-xs text-slate-600 mb-2 leading-relaxed">
-                            인프라/보안팀 담당자들의 내일 오전 빈 시간에 45분간 Post-Mortem 회의 일정 자동 예약.
-                        </p>
-                        <div class="p-2 bg-slate-900 text-blue-300 rounded text-[11px] font-mono">
-                            "안건 3가지(RMA 분석, 알람 임계치, 페일오버 검증)를 포함해 초대장 발송해줘."
-                        </div>
-                    </div>
-                </div>
-```
-
----
-
-## 🌐 Part 5: PowerPoint 데이터 그라운딩 & 제안서 현대화
-- **솔루션/앱**: Microsoft PowerPoint
-- **앱 키워드**: `powerpoint`
-
-### [Unit 21] [2026 핵심] Power BI Grounding 기반 네트워크 품질 제안서 생성
-- **배지(태그)**: POWER BI GROUNDING
-- **부제목**: 조직의 '단일 진실 공급원(SSOT)'인 Power BI 대시보드 데이터를 직접 그라운딩하여 슬라이드 빌드
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="p-5 bg-white rounded-2xl border border-orange-200 shadow-sm text-left my-2">
-                    <h4 class="text-sm font-bold text-orange-900 mb-2">Power BI 연동 슬라이드 생성 프롬프트</h4>
-                    <div class="p-3 bg-slate-900 text-orange-300 rounded-xl text-xs font-mono mb-4 leading-relaxed">
-                        "우리 회사의 [Power BI 'Network Quality' 대시보드] 데이터를 그라운딩하여 차세대 망 고도화 필요성 슬라이드를 생성해줘. 특히 전월 대비 통화/데이터 품질 저하 지표를 시각화하고, 이에 대응하는 기술적 로드맵을 제안해줘."
-                    </div>
-                    <div class="grid grid-cols-2 gap-4 text-xs text-slate-700">
-                        <div class="p-3 bg-orange-50 rounded-lg border border-orange-200">
-                            <strong class="text-orange-950">수작업 캡처/복붙 종말</strong><br>
-                            대시보드 지표를 실시간 데이터 바인딩으로 슬라이드 변환
-                        </div>
-                        <div class="p-3 bg-orange-50 rounded-lg border border-orange-200">
-                            <strong class="text-orange-950">Meeting-to-Deck 지원</strong><br>
-                            Teams 회의 녹취록을 참조하여 즉시 프레젠테이션화
-                        </div>
-                    </div>
-                </div>
-```
-
----
-
-### [Unit 22] 브랜드 키트 일괄 적용 (Brand Kit & Style Restyle)
-- **배지(태그)**: BRAND KIT & RESTYLE
-- **부제목**: 사내 공식 로고, 지정 컬러 팔레트, 엔지니어링 폰트, 표/차트 스타일을 원클릭 일괄 적용
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="grid md:grid-cols-2 gap-5 my-4 text-left">
-                    <div class="p-5 bg-white rounded-2xl border border-orange-200 shadow-sm">
-                        <h4 class="text-sm font-bold text-slate-900 mb-2">🎨 Brand Kit 스킬</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-3">
-                            기업의 CI/BI 가이드라인을 사전 정의된 스킬로 등록해두면 슬라이드 생성 시 폰트 깨짐이나 색상 불일치를 완벽히 방지합니다.
-                        </p>
-                        <div class="p-2.5 bg-slate-900 text-orange-300 rounded text-xs font-mono">
-                            "[Brand Kit] 스킬을 적용해 공식 로고와 폰트를 맞춰줘."
-                        </div>
-                    </div>
-                    <div class="p-5 bg-orange-50 rounded-2xl border border-orange-200 shadow-sm">
-                        <h4 class="text-sm font-bold text-orange-950 mb-2">⚡ Style Restyle 기능</h4>
-                        <p class="text-xs text-slate-700 leading-relaxed mb-3">
-                            기존의 낡은 텍스트 위주 슬라이드를 모던 카드 레이아웃 및 최신 테크 테마로 한 번에 재스타일링합니다.
-                        </p>
-                        <div class="p-2.5 bg-orange-600 text-white rounded text-xs font-mono">
-                            "표와 차트의 스타일을 [Style Restyle] 해줘."
-                        </div>
-                    </div>
-                </div>
-```
-
----
-
-### [Unit 23] 댓글 내 작업 할당 & 발표자 노트 (Speaker Notes)
-- **배지(태그)**: COLLABORATION & SPEECH
-- **부제목**: 슬라이드 댓글 창에서 엔지니어에게 직접 업무 할당(@Mention) 및 구어체 스크립트 자동 생성
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="grid md:grid-cols-2 gap-5 my-3 text-left">
-                    <div class="p-5 bg-white rounded-2xl border border-orange-200 shadow-sm">
-                        <h4 class="text-sm font-bold text-orange-950 mb-2">1. 댓글 내 작업 할당 (Task Assignment)</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-3">
-                            슬라이드 검토 중 특정 영역에 대해 담당자(@홍길동 엔지니어)를 멘션하여 작업을 할당하고 Teams 알림을 즉시 발송합니다.
-                        </p>
-                        <div class="p-2 bg-slate-900 text-slate-200 rounded text-xs font-mono">
-                            "@김엔지니어 3번 슬라이드 BGP 설정 검증 부탁드립니다."
-                        </div>
-                    </div>
-                    <div class="p-5 bg-white rounded-2xl border border-blue-200 shadow-sm">
-                        <h4 class="text-sm font-bold text-blue-900 mb-2">2. 발표자 노트 & Q&A 방어 논리</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-3">
-                            슬라이드 본문 요약이 아닌, 실제 발표자가 자연스럽게 읽을 수 있는 구어체 대본과 C-Level 예상 질문 3가지를 자동 생성합니다.
-                        </p>
-                        <div class="p-2 bg-slate-900 text-blue-300 rounded text-xs font-mono">
-                            "발표자 노트와 임원진 예상 Q&A 방어 논리를 작성해줘."
-                        </div>
-                    </div>
-                </div>
-```
-
----
-
-### [Unit 24] 🧪 [실습 4] Power BI 품질 지표 그라운딩 ➔ 3단 제안서 빌드
-- **배지(태그)**: HANDS-ON LAB 4
-- **부제목**: 소요시간: 15분 | 망 품질 데이터 그라운딩 ➔ 3단 모던 슬라이드 ➔ Brand Kit 적용
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="p-5 bg-white rounded-2xl border border-orange-200 shadow-sm text-left my-2">
-                    <h4 class="text-sm font-bold text-orange-950 mb-2">실습 워크플로 (Meeting-to-Deck & Style Restyle)</h4>
-                    <div class="space-y-3 text-xs text-slate-700">
-                        <div class="p-3 bg-orange-50 rounded-lg border border-orange-200">
-                            <strong class="text-slate-900">1단계: Power BI Grounding</strong><br>
-                            <code class="text-orange-700 font-mono">"Power BI 'Network Quality' 대시보드를 기반으로 3장의 제안 슬라이드를 작성해줘."</code>
-                        </div>
-                        <div class="p-3 bg-orange-50 rounded-lg border border-orange-200">
-                            <strong class="text-slate-900">2단계: 3단 모던 카드 구성</strong><br>
-                            Slide 1(품질 저하 분석) ➔ Slide 2(기술적 고도화 로드맵) ➔ Slide 3(투자 대비 효과)
-                        </div>
-                        <div class="p-3 bg-orange-50 rounded-lg border border-orange-200">
-                            <strong class="text-slate-900">3단계: Brand Kit 일괄 적용 & 작업 할당</strong><br>
-                            공식 컬러 팔레트 적용 후, 보안팀 담당자에게 방화벽 정책 검토 작업 할당(@Mention).
-                        </div>
-                    </div>
-                </div>
-```
-
----
-
-## 🌐 Part 6: Word & OneNote 고정밀 기술문서화 & 현장 지식화
-- **솔루션/앱**: Microsoft Word & OneNote
-- **앱 키워드**: `word`
-
-### [Unit 25] [2026 핵심] 기술 규격 대조, Track Changes & 진행 메시지(Progress Messages)
-- **배지(태그)**: TRACK CHANGES
-- **부제목**: DU/RU/BBU 약어 국제 표준 표기 및 Work IQ 기술규정 대조 과정을 투명하게 기록
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="p-5 bg-white rounded-2xl border border-sky-200 shadow-sm text-left my-2">
-                    <h4 class="text-sm font-bold text-sky-950 mb-2">RCA 보고서 정밀 검토 프롬프트</h4>
-                    <div class="p-3 bg-slate-900 text-sky-300 rounded-xl text-xs font-mono mb-4 leading-relaxed">
-                        "[변경 내용 추적] 모드를 활성화하고 이 RCA 보고서를 검토해줘. DU, RU, BBU 등 모든 약어를 국제 표준에 맞춰 풀어서 설명하고, 기술 규격 수치가 사내 기술 규정집(Work IQ 참조)과 일치하는지 정밀 대조해줘. 작업 중에 <strong>[진행 메시지(Progress Messages)]</strong>를 통해 단계별 수정 사항을 알려줘."
-                    </div>
-                    <div class="grid grid-cols-2 gap-4 text-xs text-slate-700">
-                        <div class="p-3 bg-sky-50 rounded-lg border border-sky-200">
-                            <strong class="text-sky-950">Track Changes 협업</strong><br>
-                            단어 단위로 수정 내역이 기록되어 팀원 검토 용이
-                        </div>
-                        <div class="p-3 bg-sky-50 rounded-lg border border-sky-200">
-                            <strong class="text-sky-950">Progress Messages</strong><br>
-                            수정 중인 단계를 실시간으로 보고하여 무결점 검증
-                        </div>
-                    </div>
-                </div>
-```
-
----
-
-### [Unit 26] 리스크 플래그, 참조 출처(Citations) & Review Summary 섹션
-- **배지(태그)**: REVIEW SUMMARY
-- **부제목**: 기술적 근거 불명확 지점에 플래그 삽입 및 최상단 검토 요약으로 팩트체크 시간 90% 단축
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="p-5 bg-white rounded-2xl border border-sky-200 shadow-sm text-left my-2">
-                    <h4 class="text-sm font-bold text-slate-900 mb-2">리스크 플래그 & Review Summary 프롬프트</h4>
-                    <div class="p-3 bg-slate-900 text-sky-300 rounded-xl text-xs font-mono mb-4 leading-relaxed">
-                        "본문 중 기술적 근거가 불분명한 지점에 리스크 플래그를 달고, 사내 기술 베이스(Work IQ)를 참조하여 정확한 출처를 표시해줘. 작업 완료 후, 문서 최상단에 [Review Summary] 섹션을 추가하여 (1) 주요 수정 제안 사항과 (2) 기술 검증이 필요한 잔여 리스크를 요약해줘."
-                    </div>
-                    <div class="grid grid-cols-3 gap-3 text-xs text-slate-700">
-                        <div class="p-2.5 bg-sky-50 rounded border border-sky-200">
-                            <strong class="text-slate-900">① 리스크 플래그</strong><br>모호한 수치 즉시 식별
-                        </div>
-                        <div class="p-2.5 bg-sky-50 rounded border border-sky-200">
-                            <strong class="text-slate-900">② 명확한 Citations</strong><br>사내 규정 출처 각주 링크
-                        </div>
-                        <div class="p-2.5 bg-sky-50 rounded border border-sky-200">
-                            <strong class="text-slate-900">③ Review Summary</strong><br>최상단 3줄 핵심 검토 요약
-                        </div>
-                    </div>
-                </div>
-```
-
----
-
-### [Unit 27] 난해한 기술 규격(RFC, 벤더 스펙)의 쉬운 해설화
-- **배지(태그)**: RFC SIMPLIFICATION
-- **부제목**: 영문 50페이지 RFC 8365(BGP EVPN)를 초급자용 비유, 용어 5선 사전, 체크리스트로 재구성
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="grid md:grid-cols-3 gap-4 my-4 text-left">
-                    <div class="p-4 bg-white rounded-xl border border-sky-200 shadow-sm">
-                        <div class="text-sky-700 font-bold text-xs mb-1">1. 일상 비유 설명</div>
-                        <p class="text-xs text-slate-600 leading-relaxed">
-                            BGP EVPN의 원리를 '전국 단위 택배 물류 및 허브 센터 시스템'에 빗대어 비전공자도 이해할 수 있게 해설
-                        </p>
-                    </div>
-                    <div class="p-4 bg-white rounded-xl border border-sky-200 shadow-sm">
-                        <div class="text-sky-700 font-bold text-xs mb-1">2. 핵심 용어 5선 정의</div>
-                        <p class="text-xs text-slate-600 leading-relaxed">
-                            NVE, VNI, RD, RT, Anycast Gateway의 정의를 실무 관점에서 1줄씩 명쾌하게 정리
-                        </p>
-                    </div>
-                    <div class="p-4 bg-white rounded-xl border border-sky-200 shadow-sm">
-                        <div class="text-sky-700 font-bold text-xs mb-1">3. 실무 점검 체크리스트</div>
-                        <p class="text-xs text-slate-600 leading-relaxed">
-                            MTU 설정(점보 프레임 9000), 언더레이 라우팅 등 도입 전 필수 점검 5개 항목을 표로 변환
-                        </p>
-                    </div>
-                </div>
-```
-
----
-
-### [Unit 28] OneNote AI 전자필기장 & 모바일 Word 현장 음성 보고
-- **배지(태그)**: ONENOTE & MOBILE
-- **부제목**: 기지국/국사 현장에서 스마트폰 음성 입력으로 점검 보고서 초안 작성 및 OneNote 점검표 정리
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="grid md:grid-cols-2 gap-5 my-4 text-left">
-                    <div class="p-5 bg-white rounded-2xl border border-sky-200 shadow-sm">
-                        <h4 class="text-sm font-bold text-slate-900 mb-2">📱 모바일 Word 음성 입력</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-3">
-                            서버실 소음 환경에서 스마트폰 음성 구술로 점검 결과를 녹음하면, Copilot이 표준 출장 보고서 양식으로 완벽히 변환합니다.
-                        </p>
-                        <div class="p-2 bg-slate-900 text-sky-300 rounded text-xs font-mono">
-                            "음성 메모를 사내 표준 국사 점검 보고서 서식으로 변환해줘."
-                        </div>
-                    </div>
-                    <div class="p-5 bg-purple-50 rounded-2xl border border-purple-200 shadow-sm">
-                        <h4 class="text-sm font-bold text-purple-950 mb-2">📓 OneNote 현장 지식화</h4>
-                        <p class="text-xs text-slate-700 leading-relaxed mb-3">
-                            두서없이 적힌 현장 필기에서 장비별 상태 표를 생성하고 긴급 조치 사항(Action Items)을 자동 추출합니다.
-                        </p>
-                        <div class="p-2 bg-slate-900 text-purple-300 rounded text-xs font-mono">
-                            "메모를 구조화된 표로 정리하고 Action Items를 추출해줘."
-                        </div>
-                    </div>
-                </div>
-```
-
----
-
-### [Unit 29] 🧪 [실습 5] 5G Core 장애 RCA 보고서 작성 (Review Summary & Progress)
-- **배지(태그)**: HANDS-ON LAB 5
-- **부제목**: 소요시간: 15분 | Track Changes 켜기 ➔ 기술규격 대조 ➔ 최상단 Review Summary 도출
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="p-5 bg-white rounded-2xl border border-sky-200 shadow-sm text-left my-2">
-                    <h4 class="text-sm font-bold text-sky-950 mb-2">실습 프롬프트 (정밀 RCA 보고서 검토)</h4>
-                    <div class="p-3 bg-slate-900 text-sky-300 rounded-xl text-xs font-mono mb-4 leading-relaxed">
-                        "[변경 내용 추적]을 켜고 이 5G Core 지연 장애 RCA 초안을 검토해줘. 기술 규격을 대조하고 진행 메시지를 표시하며, 문서 최상단에 [Review Summary]를 추가해 (1)주요 수정 사항과 (2)잔여 리스크를 정리해줘."
-                    </div>
-                    <div class="p-3 bg-sky-50 rounded-xl text-xs text-sky-900 border border-sky-200">
-                        ✓ <strong>최종 산출물:</strong> 단어 단위 수정 내역이 기록된 Word 보고서 + 최상단 Review Summary 검토표 완성.
-                    </div>
-                </div>
-```
-
----
-
-## 🌐 Part 7: Teams 회의 협업 & Copilot Cowork 종합 실습
-- **솔루션/앱**: Teams & Cowork
-- **앱 키워드**: `teams`
-
-### [Unit 30] [2026 신기능] Teams 비디오/오디오 리캡 & Meeting Recaps App
-- **배지(태그)**: TEAMS RECAPS
-- **부제목**: 핵심 발언 영상 클립 + 한국어 음성 요약이 결합된 하이라이트 영상 및 30일간의 회의 요약 허브
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="grid md:grid-cols-2 gap-5 my-4 text-left">
-                    <div class="p-5 bg-white rounded-2xl border border-indigo-200 shadow-sm">
-                        <h4 class="text-sm font-bold text-slate-900 mb-2">🎥 Video & Audio Recap</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-2">
-                            단순 텍스트 회의록을 넘어, 핵심 발언 구간의 <strong>영상 클립과 AI 요약이 결합된 하이라이트 비디오</strong>를 제공합니다.
-                        </p>
-                        <div class="text-xs text-indigo-700 font-semibold">✓ 한국어 포함 다국어 음성 요약 지원</div>
-                    </div>
-                    <div class="p-5 bg-white rounded-2xl border border-indigo-200 shadow-sm">
-                        <h4 class="text-sm font-bold text-slate-900 mb-2">📱 Meeting Recaps 전용 앱</h4>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-2">
-                            Teams 사이드바에 고정하여 <strong>최근 30일간 진행된 모든 회의 요약과 오디오 하이라이트</strong>를 한곳에서 청취하고 검색합니다.
-                        </p>
-                        <div class="text-xs text-indigo-700 font-semibold">✓ 이동 중 모바일 오디오 스트리밍 청취</div>
-                    </div>
-                </div>
-```
-
----
-
-### [Unit 31] 🏆 [종합 실습] Copilot Cowork 기반 5G Core 대규모 장애 E2E 파이프라인
-- **배지(태그)**: CAPSTONE LAB
-- **부제목**: 소요시간: 30분 | 로그 정제 ➔ 토폴로지 ➔ RCA ➔ PPT ➔ 캘린더 ➔ Cowork Skill 템플릿화
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="p-5 bg-white rounded-2xl border border-indigo-200 shadow-sm text-left my-2">
-                    <div class="grid grid-cols-6 gap-2 text-center text-xs font-mono mb-4">
-                        <div class="p-2 bg-slate-50 rounded-lg border border-slate-200">
-                            <span class="text-indigo-700 font-bold">1. Excel</span><br>
-                            <span class="text-[10px] text-slate-500">로그 정제(.:.)</span>
-                        </div>
-                        <div class="p-2 bg-slate-50 rounded-lg border border-slate-200">
-                            <span class="text-indigo-700 font-bold">2. Mermaid</span><br>
-                            <span class="text-[10px] text-slate-500">토폴로지 시각화</span>
-                        </div>
-                        <div class="p-2 bg-slate-50 rounded-lg border border-slate-200">
-                            <span class="text-indigo-700 font-bold">3. Word</span><br>
-                            <span class="text-[10px] text-slate-500">RCA 보고서</span>
-                        </div>
-                        <div class="p-2 bg-slate-50 rounded-lg border border-slate-200">
-                            <span class="text-indigo-700 font-bold">4. PPT</span><br>
-                            <span class="text-[10px] text-slate-500">Power BI 브리핑</span>
-                        </div>
-                        <div class="p-2 bg-slate-50 rounded-lg border border-slate-200">
-                            <span class="text-indigo-700 font-bold">5. Outlook</span><br>
-                            <span class="text-[10px] text-slate-500">@Calendar 예약</span>
-                        </div>
-                        <div class="p-2 bg-indigo-600 text-white rounded-lg shadow-sm">
-                            <span class="font-bold">6. Cowork</span><br>
-                            <span class="text-[10px] text-indigo-200">Skill 전사 공유</span>
-                        </div>
-                    </div>
-                    <div class="p-3 bg-indigo-50 rounded-xl text-xs text-slate-700 leading-relaxed border border-indigo-200">
-                        <strong>💡 캡스톤 최종 목표:</strong> 개별 앱의 기능을 단편적으로 쓰는 것을 넘어, Copilot Cowork를 통해 하나의 사건(5G Core 대규모 장애)을 탐지부터 사후 회의 예약 및 스킬 템플릿화까지 6단계 완결형으로 수행합니다.
-                    </div>
-                </div>
-```
-
----
-
-### [Unit 32] Agent 365 ROI 모니터링 & Microsoft Purview 보안 거버넌스
-- **배지(태그)**: GOVERNANCE & ROI
-- **부제목**: MTTR(장애 복구 시간) 단축 지표 실시간 추적 및 민감도 레이블(Sensitivity Label) 자동 상속
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="grid md:grid-cols-2 gap-5 my-4 text-left">
-                    <div class="p-5 bg-white rounded-2xl border border-slate-200 shadow-sm">
-                        <h4 class="text-sm font-bold text-slate-900 mb-2">📊 Agent 365 대시보드 (ROI 측정)</h4>
-                        <ul class="text-xs text-slate-600 space-y-2 list-disc list-inside">
-                            <li>에이전트 도입에 따른 <strong>MTTR(평균 장애 처리 시간) 80% 단축</strong> 수치화</li>
-                            <li>부서별 Copilot 활용률 및 시간 절감 비용 실시간 집계</li>
-                            <li>가장 빈번하게 사용된 '코워크 스킬' 랭킹 확인</li>
-                        </ul>
-                    </div>
-                    <div class="p-5 bg-white rounded-2xl border border-indigo-200 shadow-sm border-t-4 border-t-indigo-600">
-                        <h4 class="text-sm font-bold text-indigo-900 mb-2">🔒 Purview 민감도 레이블 자동 상속</h4>
-                        <ul class="text-xs text-slate-600 space-y-2 list-disc list-inside">
-                            <li>1급 기밀 네트워크 설계도 참조 시 생성 문서에 <strong>'기밀(Confidential)' 레이블 자동 승계</strong></li>
-                            <li>외부 유출 방지를 위한 자동 RMS 암호화 적용</li>
-                            <li>사내 엔지니어링 DLP 정책과 100% 무결점 호환</li>
-                        </ul>
-                    </div>
-                </div>
-```
-
----
-
-### [Unit 33] [실무 즉시 적용] 통신 전용 프롬프트 치트시트 & Architect's Note
-- **배지(태그)**: FINAL WRAP-UP
-- **부제목**: 현업에 바로 복사해 쓰는 핵심 프롬프트 요약표와 책임 있는 AI 엔지니어링 철학
-
-#### 📝 본문 및 프롬프트 내용
-```html
-<div class="p-5 bg-white rounded-2xl border border-slate-200 shadow-sm text-left my-2">
-                    <table class="w-full text-xs text-slate-700 mb-4">
-                        <thead>
-                            <tr class="border-b border-slate-200 text-indigo-900">
-                                <th class="py-1 text-left font-bold w-24">앱</th>
-                                <th class="py-1 text-left font-bold">실무 조치 사항 (Copy & Paste 템플릿)</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-100 font-mono text-[11px]">
-                            <tr>
-                                <td class="py-2 font-bold text-blue-700">Outlook</td>
-                                <td>[발신자]의 [인시던트] 메일 요약 및 첨부된 [벤더사] 사양서를 Attachment List로 나열해줘.</td>
-                            </tr>
-                            <tr>
-                                <td class="py-2 font-bold text-sky-700">Word</td>
-                                <td>[문서명]에 Track Changes를 켜고 기술규격을 대조한 후 최상단에 Review Summary를 작성해줘.</td>
-                            </tr>
-                            <tr>
-                                <td class="py-2 font-bold text-emerald-700">Excel</td>
-                                <td>[B7.:.F50000] 데이터를 트리밍 참조하여 특이값을 추출하고 Pivot Auto Refresh를 설정해줘.</td>
-                            </tr>
-                            <tr>
-                                <td class="py-2 font-bold text-orange-700">PPT</td>
-                                <td>[Power BI 망 품질 대시보드]를 그라운딩하여 제안서 초안을 잡고 Brand Kit을 적용해줘.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="p-3.5 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-xl shadow-sm">
-                        <div class="text-xs font-bold mb-1 font-mono">📜 Architect's Note</div>
-                        <p class="text-xs italic leading-relaxed">
-                            "모든 AI 생성 결과물은 전문가의 최종 검토를 거쳐야 합니다. 책임은 도구가 아닌, 데이터를 제어하는 엔지니어에게 있습니다."
-                        </p>
-                    </div>
-                </div>
-```
-
----
+
+## 🏢 KT AX 핵심 직무 교육과정
+
+### [COVER] Work IQ & M365 Copilot 실무 마스터
+- **부제**: KT 코어/전송망 엔지니어를 위한 데이터 기반 의사결정 & 업무 자동화 워크플로우
+- **과정 요약**: KT 코어/전송망 AX 엔지니어 실무 마스터 (4 Chapters, 52 Units, 7 Hours)
+
+
+## 🏢 전체 교육 커리큘럼 안내
+
+### [INDEX] 전체 교육 커리큘럼 로드맵 (4 Chapters)
+- **부제**: 비즈니스 AI 패러다임 전환부터 업무 환경 구축, 오피스 핵심 실무, 엔드투엔드 종합 플레이북까지
+- **4대 챕터 로드맵**:
+  1. Chapter 01: M365 Copilot의 변화, 일을 더 잘 이해하게 된 AI (Unit 01~08)
+  2. Chapter 02: 사전 준비, Copilot 활용을 위한 업무 환경 만들기 (Unit 09~14)
+  3. Chapter 03: 산더미 같은 이메일 탈출과 스마트한 일정 관리 (Unit 15~19)
+  4. Chapter 04: 데이터기반 의사결정, Copilot 에이전트 모드를 활용한 실전 플레이북 (Unit 20~52)
+
+
+## 🏢 01. M365 Copilot의 변화, 일을 더 잘 이해하게 된 AI
+
+### [CH 01] 01. M365 Copilot의 변화, 일을 더 잘 이해하게 된 AI
+- **챕터 분류**: `CHAPTER 01`
+- **핵심 솔루션**: `Chapter 01`
+
+### [Unit 01] 범용 AI와 M365 Copilot의 핵심 차이
+- **분류 태그**: `AI COMPARISON` | **솔루션**: `Work IQ & Copilot Core`
+- **핵심 부제**: 단순 웹 챗봇의 한계를 넘어, KT 사내 통신 업무 맥락(Context)과 엔터프라이즈 보안을 갖춘 AI로의 전환
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+Web AI 
+
+##### 웹 기반 범용 AI (ChatGPT 등)
+
+- ✕ 업무 맥락 부재: 사내 메일, Teams 대화, 결재 문서를 전혀 알지 못함 
+
+- ✕ 데이터 유출 위험: 입력 프롬프트가 외부 공용 모델 재학습에 노출 
+
+- ✕ 수동 복사-붙여넣기: 브라우저와 오피스 앱 간의 비효율적 단절 
+
+- ✕ 권한 제어 불가: 사내 보안 등급(ACL)에 따른 정보 격리 불가 
+
+ 범용 지식 검색 중심의 퍼블릭 웹 도우미 
+
+ WORK IQ AI 
+
+##### Microsoft 365 Copilot
+
+- ✓ Work IQ 사내 맥락 통합: 내 메일, 일정, SharePoint 문서를 즉시 연계 이해 
+
+- ✓ 엄격한 데이터 보호: 고객 데이터는 AI 모델 학습에 사용되지 않음 
+
+- ✓ 오피스 내 네이티브 실행: Word, Excel, Teams, Outlook 내에서 직접 생성/수정 
+
+- ✓ 기존 문서 권한 자동 준수: 내가 읽기 권한을 가진 문서에 한해서만 안전 답변 
+
+ 기업 내부 데이터를 안전하게 활용하는 엔터프라이즈 전담 동료 
+
+ 💡 
+
+ 핵심 통찰: 웹 AI가 세상의 일반 지식을 아는 도우미라면, M365 Copilot은 기존 문서 권한과 테넌트 보안을 완벽히 준수하는 전담 동료입니다.
+
+------------------------------------------------------------
+
+### [Unit 02] 문서 작성 도우미에서 자율 관제 에이전트로의 전환
+- **분류 태그**: `PARADIGM SHIFT` | **솔루션**: `Work IQ & Copilot Core`
+- **핵심 부제**: 단순 문서 작성을 넘어 KT 네트워크 장애 분석 및 조치 명령을 직접 수행하는 Autonomous AI로의 진화
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+Phase 1 
+
+##### Assistive (보조 도우미)
+
+ 사용자가 구체적인 프롬프트를 입력하면 텍스트를 단순 생성하거나 문법을 다듬어주는 수동적 보조 단계 
+
+ 단순 텍스트 작성 & 오탈자 교정 
+
+ Phase 2 
+
+##### Copilot (협업 동료)
+
+ 사내 메일, Teams, 문서 데이터를 Work IQ로 결합하여 사용자의 질문에 지능형 맥락 기반으로 답변하는 단계 
+
+ 사내 맥락 융합 & 회의/데이터 요약 
+
+ Phase 3 (Next) 
+
+##### Autonomous Agent (자율 관제)
+
+ KT 통신망 트래픽 이상을 Copilot이 데이터/로그 분석으로 조기에 감지하고, 표준 작업 절차(SOP) 기반의 조치안을 초안으로 작성·제안하는 에이전트 (실제 명령 실행은 연동된 운영 시스템을 통해 담당자 승인 하에 이뤄짐) 
+
+ 이상 징후 조기 감지 & 조치안 자동 초안 작성 
+
+ 💡 
+
+ 핵심 패러다임: 지시를 기다리는 단순 작성 보조를 넘어, Work IQ와 Office Agents를 기반으로 KT 네트워크 이상을 선제적으로 감지하고 조치안 마련을 지원하는 지능형 협업 파트너로 진화합니다.
+
+------------------------------------------------------------
+
+### [Unit 03] 차세대 AI 모델 선택 가이드
+- **분류 태그**: `MODEL ARCHITECTURE` | **솔루션**: `Work IQ & Copilot Core`
+- **핵심 부제**: GPT-5.6, Claude Sonnet 5, Work IQ 엔진의 KT 엔지니어링 최적 조합
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+Advanced 
+ GPT-5.6 
+
+ 복합 논리 & 수학적 추론 
+ 5G 기지국 CAPEX 회수율 계산, Z-Score 이상 트래픽 통계 분석 및 대규모 분산 계산 
+
+ Excel / Python 연동 
+
+ Precision 
+ Claude Sonnet 5 
+
+ 초정밀 코딩 & 표준 문서 
+ BGP 라우팅 구성 스크립트 작성, RFC 표준 준수 보고서 및 글로벌 기술 제안서 
+
+ Word / SOP 작성 
+
+ Low Latency 
+ Work IQ 인덱싱 엔진 
+
+ 사내 지식 초고속 인덱싱 
+ SharePoint/OneDrive 파일 검색, 보안 권한 검증 및 실시간 사내 커뮤니케이션 
+
+ Copilot Chat / Teams
+
+------------------------------------------------------------
+
+### [Unit 04] KT 사내 데이터 자산화 엔진 (Work IQ)
+- **분류 태그**: `WORK IQ ENGINE` | **솔루션**: `Work IQ & Copilot Core`
+- **핵심 부제**: KT 전사 메일, 국사 점검 일지, 장애 보고서를 지능형 업무 그래프로 연결
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+Graph Engine 
+
+##### Work IQ가 실무를 이해하는 방식
+
+ 단순 키워드 매칭이 아닌, 엔지니어의 프로젝트 참여 이력 , 최근 검토한 네트워크 구성도 , Teams 장애 대화 스레드 의 맥락을 결합하여 가장 정확한 답변을 도출합니다.
+
+ 🔒 Microsoft Graph 권한 모델 검증: 권한이 없는 문서는 검색 결과에 절대 미포함 
+
+ // Work IQ 지식 추출 파이프라인 
+ 1. User Query: "지난달 코어망 점검 이슈 요약해줘" 
+ 2. Graph Scan: Exchange 메일 + Teams 채널 + SharePoint SOP 
+ 3. Contextual Synthesis: 시간순 장애 타임라인 자동 생성
+
+------------------------------------------------------------
+
+### [Unit 05] 엔지니어링 멀티모달 분석 파이프라인
+- **분류 태그**: `MULTIMODAL AI` | **솔루션**: `Work IQ & Copilot Core`
+- **핵심 부제**: KT 5G 코어망 구성도 이미지와 대용량 라우터 시스로그(Syslog)를 동시에 분석하는 차세대 파이프라인
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+🖼️ 
+
+##### 네트워크 토폴로지 도면 1차 분석
+
+ Visio/PNG 네트워크 구성도 이미지를 업로드하면 단일 장애점(SPOF) 후보를 파악하고 이중화 개선 방향을 초안으로 제안합니다. (※ 복합 토폴로지는 엔지니어 최종 검증 필요) 
+
+ "이 토폴로지 도면에서 L3 스위치 백본 이중화 링크 누락 의심 구간을 1차 검토해줘"
+
+ 📊 
+
+##### 대용량 로그 & 수치 복합 추론
+
+ Excel 트래픽 급증 시간대와 장애 리포트 본문을 결합하여 복합적인 장애 인과관계를 통계적으로 검증합니다.
+
+ "CPU 점유율 90% 이상 시점과 BGP 플래핑 알람 발생의 상관계수 계산"
+
+ 💡 실무 팁: 멀티모달 비전 분석은 1차 스크리닝 및 권고안 초안 생성용으로 활용하며, 실제 망 구성 변경 전 최종 확인은 엔지니어가 수행합니다.
+
+------------------------------------------------------------
+
+### [Unit 06] KT 업무 자동화 에이전트 (Copilot Agents)
+- **분류 태그**: `COPILOT AGENTS` | **솔루션**: `Work IQ & Copilot Core`
+- **핵심 부제**: Copilot Studio 커스텀 에이전트와 오피스 에이전트를 결합한 KT 맞춤형 자율 워크플로우
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+01. Studio Agent 
+
+##### NOC 정기 브리핑 에이전트
+
+ 트래픽/장애 데이터를 주기적으로 자동 집계하여 Teams 채널에 요약 브리핑 공유 
+
+ Copilot Studio 커스텀 연동 
+
+ 02. Studio Agent 
+
+##### CVE 취약점 분석 에이전트
+
+ 장비 펌웨어 버전과 외부 보안 패치 DB를 자동 비교하여 긴급 조치 권고서 발행 
+
+ 보안 DB 연동 커스텀 에이전트 
+
+ 03. Word Agent 
+
+##### 표준 작업 절차서(SOP) 에이전트
+
+ 엔지니어의 커맨드 로그를 표준 양식의 Word 기술 매뉴얼로 자동 변환 및 지식화 
+
+ Word 기반 오피스 에이전트 
+
+ 💡 구조 안내: 01·02번은 Copilot Studio 기반으로 외부 로그/보안 DB를 연동하는 맞춤형 커스텀 에이전트이며, 03번은 Word 기반의 대화형 문서 작성 에이전트입니다.
+
+------------------------------------------------------------
+
+### [Unit 07] 실시간 통합 워크스페이스 (Copilot Chat)
+- **분류 태그**: `COPILOT CHAT` | **솔루션**: `Work IQ & Copilot Core`
+- **핵심 부제**: Teams, SharePoint, Outlook을 횡단하며 사내 맥락을 실시간으로 융합하는 중앙 허브
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+✨ Copilot Chat Cross-App Query 
+
+ 📋 프롬프트 복사 
+
+ "[Teams: 코어망운영팀 채널]에서 오늘 오전 9시 이후 논의된 '백본 BGP 플래핑' 관련 대화와, [SharePoint: 2026_코어망_토폴로지.docx] 문서를 대조해서 발생 원인과 현재 조치 현황을 3줄로 요약하고, 담당 엔지니어에게 보낼 회신 메일 초안을 작성해줘."
+
+ 📎 파일 참조 (SharePoint / OneDrive) 
+ 💬 대화 참조 (Teams 채널 / 채팅) 
+ ✉️ 메일 참조 (Outlook 스레드) 
+
+ 💡 실무 UI 팁: 채팅창에 ' / '를 입력하면 나타나는 팝업 피커에서 Teams 채널, SharePoint 문서, 메일을 직접 선택하여 프롬프트에 첨부합니다.
+
+------------------------------------------------------------
+
+### [Unit 08] 보안 거버넌스를 준수하는 M365 활용법
+- **분류 태그**: `ENTERPRISE SECURITY` | **솔루션**: `Work IQ & Copilot Core`
+- **핵심 부제**: KT 통신망 보안 규정에 부합하는 아키텍처로 기업 데이터 외부 유출을 방지하는 고객 데이터 비학습 및 테넌트 데이터 격리
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+User Authentication 
+
+ 👤 
+ 💻 
+
+ 사내 인증 엔지니어 
+ Entra ID SSO 로그인 
+
+ Apps on Your Devices 
+
+ 📄 Word 
+ 📊 Excel 
+ 📑 PPT 
+ ✉️ Outlook 
+ 💬 Teams 
+ ☁️ OneDrive 
+
+##### Your Microsoft 365 Tenant
+
+ Encrypted Boundary 
+
+ Microsoft Graph (Work IQ + Microsoft Graph 기반 기존 권한 상속 실시간 인덱싱)
+
+ Microsoft 365 Service Boundary (외부 재학습 원천 차단) 
+
+ ✉️ Exchange 
+ ☁️ SharePoint 
+ 💬 Teams 
+ 🛡️ Purview 
+
+ ✨ 
+
+ Microsoft 
+ 365 Copilot Core 
+
+ Azure OpenAI Private Service 
+ GPT-5.6 / Claude Sonnet 5 (Enterprise Data Protection 적용) 
+
+ 🛡️ 고객 데이터는 테넌트 내에서 완벽히 보호되며, AI 모델 재학습에 절대 사용되지 않습니다.
+
+------------------------------------------------------------
+
+
+## 🏢 02. 사전 준비, Copilot 활용을 위한 업무 환경 만들기
+
+### [CH 02] 02. 사전 준비, Copilot 활용을 위한 업무 환경 만들기
+- **챕터 분류**: `CHAPTER 02`
+- **핵심 솔루션**: `Chapter 02`
+
+### [Unit 09] Copilot 도입과 문서 중앙화의 필요성
+- **분류 태그**: `PREPARATION & SETUP` | **솔루션**: `Cloud Document Centralization`
+- **핵심 부제**: Copilot 성능을 제대로 이끌어내기 위한 필수 선결 과제: 파편화된 로컬 문서를 클라우드로 통합
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+Local PC 
+
+##### 로컬 PC 파편화의 한계
+
+- • Copilot 인덱싱 불가: C드라이브, 바탕화면 파일은 AI가 접근 못함
+
+- • 팀원 간 지식 고립: 담당자 부재 시 설정 파일 및 SOP 조회 불가
+
+- • 버전 충돌 발생: `최종_수정_진짜최종.xlsx` 등 파일 버전 혼선
+
+ Cloud 
+
+##### M365 클라우드 문서 중앙화
+
+- • Graph 자동 인덱싱: 업로드 후 자동으로 Copilot 지식 기반에 반영
+
+- • 3대 중앙화 축: OneDrive(개인), SharePoint(부서), Teams(프로젝트)
+
+- • 자동 버전 이력: 실수로 덮어써도 이전 시점으로 간편 복원
+
+------------------------------------------------------------
+
+### [Unit 10] OneDrive를 활용한 개인 업무 문서 중앙화
+- **분류 태그**: `ONEDRIVE CENTRAL` | **솔루션**: `Cloud Document Centralization`
+- **핵심 부제**: KT 엔지니어 개인의 망 분석 데이터와 로그 메모를 Copilot이 안전하게 참조할 수 있도록 세팅
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+Step 1 
+
+##### PC 폴더 백업 동기화
+
+ 내 컴퓨터의 바탕화면과 문서 폴더를 OneDrive에 자동 동기화하여 클라우드 저장 후 자동으로 인덱싱 
+
+ Step 2 
+
+##### 구조화된 폴더 명명
+
+ `[연도]_[프로젝트명]_[문서종류]` 표준 규칙으로 파일명을 정리하여 검색 정확도 극대화 
+
+ Step 3 
+
+##### 자동 저장 (AutoSave On)
+
+ Office 앱 상단의 '자동 저장'을 켜서 작성 중인 수정 사항이 클라우드에 자동 저장되어 Copilot이 최신 내용 참조 가능
+
+------------------------------------------------------------
+
+### [Unit 11] SharePoint 기반 팀 지식 베이스 통합
+- **분류 태그**: `SHAREPOINT HUB` | **솔루션**: `Cloud Document Centralization`
+- **핵심 부제**: KT 관제 센터 및 부서의 장비 Config 표준, 망 구성도, 과거 장애 이력을 하나의 팀 허브로 일원화
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+##### 부서 공용 매뉴얼과 장애 이력의 지식 자산화
+
+ 신규 엔지니어가 입사하거나 야간 긴급 장애 시, 선임자에게 즉시 연락이 어려운 상황에서도 Copilot에게 질문하면 SharePoint에 축적된 매뉴얼과 과거 장애 이력을 근거로 빠르게 대응 방향을 찾을 수 있습니다. (※ 실제 망 조치 및 명령 실행은 반드시 담당자 검증 후 진행) 
+
+ 📁 라우터/스위치 Config 표준 라이브러리 
+ 📋 통신사 간 상호연동 인터페이스 가이드 
+ 🛡️ 비상 장애 대응 표준 작업 절차서(SOP) 
+
+ 💡 실무 원칙: Copilot은 축적된 문서 기반의 1차 가이드 초안을 제시하므로, 실제 통신망 장애 조치 전 최신 펌웨어 버전 및 설정 기준과의 정합성을 엔지니어가 반드시 교차 검증합니다.
+
+------------------------------------------------------------
+
+### [Unit 12] Teams를 통한 실시간 협업 채널 중앙화
+- **분류 태그**: `TEAMS COLLABORATION` | **솔루션**: `Cloud Document Centralization`
+- **핵심 부제**: KT 현장 출동팀, 관제 센터, 엔지니어링 부서 간 실시간 대화와 회의 녹화본의 유기적 컨텍스트 융합
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+📁 
+
+##### 1. 채널별 파일 탭 활용
+
+ 이메일 첨부 대신 Teams 채널 '파일' 탭에 저장 ➔ SharePoint와 자동 연동되어 팀 전체 지식으로 자동 인덱싱됩니다.
+
+ 🎙️ 
+
+##### 2. 회의 녹음 및 스크립트(Transcript)
+
+ 장애 대책 회의 시 '녹음 및 대화 기록'을 켜두면, 회의 직후 Copilot이 논의된 액션 아이템과 결정 사항을 자동 정리합니다.
+
+------------------------------------------------------------
+
+### [Unit 13] Purview 기반 권한 관리와 보안 거버넌스
+- **분류 태그**: `SECURITY GOVERNANCE` | **솔루션**: `Cloud Document Centralization`
+- **핵심 부제**: 중앙화된 사내 문서 중 비인가자나 타 부서에 기밀이 노출되지 않도록 체계적으로 통제
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+Microsoft Graph 
+
+##### 기존 문서 권한 자동 준수
+
+ 사용자의 읽기 권한을 그대로 계승하여, 특정 폴더에 권한이 없는 직원이 질의해도 해당 문서는 검색 결과에 노출되지 않습니다.
+
+ Purview 
+
+##### 민감도 레이블 보호
+
+ [대외비] 레이블이 지정된 문서를 Copilot이 인용하거나 요약할 때도 원본 문서의 암호화와 보안 등급이 그대로 유지됩니다.
+
+------------------------------------------------------------
+
+### [Unit 14] 네트워크 기술 자료 자동 인덱싱 파이프라인
+- **분류 태그**: `ENV PIPELINE` | **솔루션**: `Cloud Document Centralization`
+- **핵심 부제**: 주기적으로 업데이트되는 장비 백업 파일의 자동 인덱싱 구축 파이프라인
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+⚙️ 
+ 1. 장비 자동 백업 
+ TFTP / FTP 백업 
+
+ 🔄 
+ 2. Power Automate 
+ OneDrive 동기화 
+
+ ⚡ 
+ 3. Semantic Index 
+ 자동 벡터 인덱싱 
+
+ ✨ 
+ 4. Copilot 질의 
+ 질의 응답 가능
+
+------------------------------------------------------------
+
+
+## 🏢 03. 산더미 같은 이메일 탈출과 스마트한 일정 관리
+
+### [CH 03] 03. 산더미 같은 이메일 탈출과 스마트한 일정 관리
+- **챕터 분류**: `CHAPTER 03`
+- **핵심 솔루션**: `Chapter 03`
+
+### [Unit 15] 좋은 프롬프트 작성법과 Prompt Coach
+- **분류 태그**: `PROMPT COACH` | **솔루션**: `Outlook & Teams Productivity`
+- **핵심 부제**: 목표(Goal), 맥락(Context), 출처(Source), 기대형식(Expectation) 4대 요소와 AI 코칭
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+🎯 좋은 프롬프트의 4대 핵심 구조 
+
+- 1. Goal (목표): 무엇을 만들어야 하는가? (예: 회신 메일 초안)
+
+- 2. Context (맥락): 어떤 상황인가? (예: BGP 순단 발생)
+
+- 3. Source (출처): 어떤 파일 참조? (예: /files '로그.xlsx')
+
+- 4. Expectation (형식): 어조와 형태는? (예: 타임라인 표)
+
+ ✨ Prompt Coach 에이전트 실전 코칭 
+
+ 프롬프트를 보내기 전 코칭을 요청하면 누락된 맥락과 모호한 지시를 스스로 찾아내어 고품질 프롬프트로 업그레이드합니다.
+
+ "내 프롬프트에서 엔지니어링 용어와 참조 출처가 부족한 부분을 Prompt Coach 원칙에 맞게 보완해줘."
+
+------------------------------------------------------------
+
+### [Unit 16] 긴급 장애 메일 요약 및 핵심 분류
+- **분류 태그**: `OUTLOOK MASTERY` | **솔루션**: `Outlook & Teams Productivity`
+- **핵심 부제**: 수십 통이 얽힌 KT 백본망 트래픽 급증 스레드 타임라인 요약 및 긴급 기술 메일 맥락 추출
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+Summary 
+
+##### 1. 스레드 한 번에 요약
+
+ 30통이 넘는 답장 메일을 일일이 읽지 않아도 [Copilot 요약] 버튼 한 번으로 핵심 사건과 액션 아이템을 요약합니다.
+
+ "최초 장애 알람 발생 시각, 담당자별 조치 내역, 미해결 이슈를 타임라인 표로 정리해줘"
+
+ Search 
+
+##### 2. 핵심 분류 & 맥락 검색
+
+ 단순 단어가 아닌 자연어 맥락 검색으로 지난 6개월간 Cisco TAC 엔지니어와 주고받은 버그 패치 메일을 빠르게 찾아줍니다.
+
+ "지난 분기 코어 라우터 OS 버그 패치와 관련해 벤더사에서 보낸 권고 메일을 찾아줘"
+
+------------------------------------------------------------
+
+### [Unit 17] 해외 벤더 기술 지원(TAC) 영문 메일 작성
+- **분류 태그**: `GLOBAL TAC` | **솔루션**: `Outlook & Teams Productivity`
+- **핵심 부제**: KT 코어 장비(Cisco/Nokia/Ericsson) 오류 로그를 첨부한 영문 TAC 케이스 오픈 메일 자동 생성
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+✉️ Global TAC Support Request 
+
+ 📋 프롬프트 복사 
+
+ "현재 발생한 OSPF LSA 플러딩 및 패킷 드롭 현상에 대해 Cisco TAC 엔지니어에게 Severity-2 티켓을 요청하는 정중하고 전문적인 영문 메일을 작성해줘. 발생 일시, 장비 모델(ASR 9000), IOS-XR 버전, 첨부한 Show tech-support 로그를 포함해줘."
+
+ 💡 실무 팁: 대용량 진단 로그 파일은 메일에 직접 첨부하며, Copilot은 본문에 로그 핵심 장애 증상과 장비 제원을 인용하여 전문 영문 초안을 작성합니다.
+
+------------------------------------------------------------
+
+### [Unit 18] 스마트 회의 예약 및 공지 자동화
+- **분류 태그**: `SMART SCHEDULING` | **솔루션**: `Outlook & Teams Productivity`
+- **핵심 부제**: 참석자 캘린더 공통 빈 시간 자동 탐색 및 야간 작업 공지 초안 작성·예약 전송
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+Schedule with Copilot 
+
+##### 1. 스마트 회의 잡기
+
+ 참석자들의 캘린더를 자동 대조하여 공통 빈 시간을 찾고 회의 안건과 Teams 링크가 포함된 초대를 즉시 생성합니다.
+
+ "이번 주 금요일 오후 전송망팀과 무선팀 팀장님들이 모두 가능한 30분 미팅을 잡아줘"
+
+ Draft & Schedule Send 
+
+##### 2. 정기 작업 공지 예약
+
+ 야간 작업 공지 메일 초안을 Copilot이 자동으로 작성하면, Outlook의 예약 전송(Schedule Send) 기능으로 원하는 시각에 발송되도록 설정할 수 있습니다.
+
+ "내일 새벽 02:00 L3 스위치 펌웨어 업그레이드 작업에 따른 서비스 영향도 안내 메일 초안을 작성해줘"
+
+ 💡 실무 팁: 1번은 Schedule with Copilot으로 회의 일정을 자동 조율하며, 2번은 Copilot의 메일 초안 작성과 Outlook의 '예약 전송(Schedule Send)' 드롭다운 설정을 연계하여 활용합니다.
+
+------------------------------------------------------------
+
+### [Unit 19] Teams 회의 요약과 Copilot 사이드 패널 활용
+- **분류 태그**: `TEAMS RECAP & PANEL` | **솔루션**: `Outlook & Teams Productivity`
+- **핵심 부제**: 회의 직후 자동 생성되는 지능형 Recap과 앱 우측 사이드 패널을 통한 실시간 초안 튜닝
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+Recap 
+
+##### 1. Teams 회의 요약하기
+
+ 1시간 회의가 끝나면 전체 대화를 분석하여 결정된 사항(Decisions)과 담당자별 할 일(Action Items)을 5줄로 자동 정리합니다.
+
+ "이 회의에서 김엔지니어와 박팀장이 합의한 롤백 기준과 일정을 요약해줘"
+
+ Side Panel 
+
+##### 2. Copilot 사이드 패널
+
+ 우측 [Copilot 패널]을 열어 대화하듯 메일 초안의 어조를 정중하게 변경하거나 분량을 조절하고 사내 규정을 질의합니다.
+
+ "작성된 회신 메일을 조금 더 격식 있는 비즈니스 어조로 수정하고 길이 줄여줘"
+
+------------------------------------------------------------
+
+
+## 🏢 04. 데이터기반 의사결정, Copilot 에이전트 모드를 활용한 실전 플레이북
+
+### [CH 04] 04. 데이터기반 의사결정, Copilot 에이전트 모드를 활용한 실전 플레이북
+- **챕터 분류**: `CHAPTER 04`
+- **핵심 솔루션**: `Chapter 04`
+
+### [Unit 20] Excel Copilot 엔지니어링 활용 4대 핵심 기능
+- **분류 태그**: `EXCEL • CORE 4 PILLARS` | **솔루션**: `Microsoft Excel`
+- **핵심 부제**: KT 5G 무선망 품질 지표(PRB Usage, Drop Rate) 정제, 생성, 시각화, 통계 분석 4대 핵심 기능
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+🔧 
+##### 01. 편집 & 02. 생성
+
+- • 편집 (Edit): 서식 적용, 레이아웃 정리, 조건부 서식 강조
+
+- • 생성 (Create): 수식 자동 생성, 예시 기반 데이터 열 자동 채우기
+
+ 📈 
+##### 03. 시각화 & 04. 분석
+
+- • 시각화 (Visualize): 차트 즉시 생성, 피벗 테이블 자동 생성
+
+- • 분석 (Analyze): 텍스트 요약, 이상치(Outlier) 발견, 데이터 필터링
+
+ ✨ 
+ "이 시트의 KT 수도권 5G 기지국 전체 트래픽 통계를 분석하고, 이상치가 발생한 주요 시간대를 피벗 테이블로 요약해줘." 
+
+ 📋 복사
+
+------------------------------------------------------------
+
+### [Unit 21] 전역 설정과 '.Rules' 시트 기반 규칙 제어
+- **분류 태그**: `EXCEL • CUSTOM RULES` | **솔루션**: `Microsoft Excel`
+- **핵심 부제**: 계정 전체에 적용되는 전역 설정과 '.Rules' 워크시트를 통한 파일 단위 동적 규칙 제어
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+🌐 
+##### 계정 전체 적용 (Global)
+
+- • 통화 기호(₩), 날짜 형식(DD-MMM-YYYY) 기본값
+
+- • 어조(Tone) 및 설명 상세도(Detail Level) 설정
+
+- • 모든 통합 문서에 공통으로 계승 적용
+
+ 📋 
+##### 특정 파일 전용 (Local '.Rules')
+
+- • '.Rules' 전용 시트 생성 : A열에 셀당 1개 규칙 나열
+
+- • IF 수식 동적 규칙 적용: =IF(B1="Executive", "1페이지 요약", "상세 테이블") 
+
+- • 공유 보존: 파일과 함께 규칙이 다른 사용자에게 전달
+
+------------------------------------------------------------
+
+### [Unit 22] 사내 파일 및 Power BI 데이터 연동 전략
+- **분류 태그**: `EXCEL • DATA SOURCES` | **솔루션**: `Microsoft Excel`
+- **핵심 부제**: 웹 검색 인용, SharePoint 사내 문서, 페더레이션 커넥터(Canva, Salesforce, FactSet), Power BI 대시보드
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+🌐 
+ 웹 (Web) 
+ 실시간 검색 & 출처 연동 
+
+ ☁️ 
+ 사내 작업 파일 
+ SharePoint / OneDrive 
+
+ 🔌 
+ 페더레이션 커넥터 
+ Canva, Salesforce, FactSet 
+
+ 📊 
+ Power BI 
+ 대시보드 실시간 분석
+
+------------------------------------------------------------
+
+### [Unit 23] 수식 자동 제안과 SKILL.md 매크로 연동
+- **분류 태그**: `EXCEL • SKILLS & AUTOMATION` | **솔루션**: `Microsoft Excel`
+- **핵심 부제**: 컨텍스트 기반 수식 자동 완성, 패턴 인식 채우기, SKILL.md 사용자 정의 반복 프로세스 매크로화
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+⚡ 
+##### 수식 제안 (Formula Suggestion)
+
+- • 컨텍스트 기반 자동 완성 & 예시 패턴 인식
+
+- • 파일 > 옵션 에서 Copilot 수식 제안 On/Off 가능
+
+- • 복잡한 INDEX-MATCH, XLOOKUP 수식을 빠르게 자동 생성
+
+ 🧩 
+##### 기술 (Skills) 연동
+
+- • 반복 프로세스 매크로화: @mention 또는 메뉴 호출
+
+- • 기본 기술: @brandkit , @theme-design 
+
+- • 사용자 지정 기술: OneDrive '기술' 폴더 내 SKILL.md 정의
+
+------------------------------------------------------------
+
+### [Unit 24] 대용량 5G KPI 데이터 정제 및 시각화
+- **분류 태그**: `EXCEL • HANDS-ON 1-1` | **솔루션**: `Microsoft Excel`
+- **핵심 부제**: KT 기지국 비정형 로그 정제, 결측치 자동 보정, 과부하 기지국(PRB 85% 이상) 조건부 상태 분류
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+📊 
+
+##### Excel Copilot 기능 아키텍처 맵
+
+ 운영 모드 • .Rules 시트 • 페더레이션 커넥터 • Skills 기술 
+
+ Excalidraw Map 
+
+ ⚡ 1. 3대 운영 모드 
+
+- • 편집: 셀/수식 직접 수정
+
+- • 계획: 단계별 파이프라인
+
+- • 채팅: 데이터 인사이트 질의
+
+ 📋 2. '.Rules' 전용 시트 
+
+- • A열 나열: 셀당 1개 규칙 기술
+
+- • 동작 전환: 드롭다운 수식 제어
+
+- • 공유 보존: 파일과 함께 전파
+
+ 🌐 3. 데이터 & 페더레이션 
+
+- • 사내 지식: 회사 문서, 대화
+
+- • 커넥터: Salesforce, FactSet
+
+- • 출처 인용: 웹 검색 결합
+
+ 🧩 4. 기술 (Skills) 
+
+- • MS 기술: @brandkit, @theme-design
+
+- • 사용자 정의: `SKILL.md`
+
+- • 모델: GPT-5.6 / Claude
+
+ Step 1. 결측치 및 비정형 로그 정제 
+
+ "빈 셀(N/A)을 이전 정상 측정값으로 채우고, 'Latency_ms' 열에서 비정상 음수 값을 0으로 일괄 보정해줘."
+
+ Step 2. 조건부 파생 열 생성 
+
+ "'PRB_Usage'가 85% 이상이면서 'Drop_Rate'가 1.5% 초과인 경우 '위험', 그렇지 않으면 '정상'으로 분류하는 'Status' 열 추가해줘."
+
+------------------------------------------------------------
+
+### [Unit 25] 기지국 수식 계산과 피벗 차트 자동화
+- **분류 태그**: `EXCEL • HANDS-ON 1-2` | **솔루션**: `Microsoft Excel`
+- **핵심 부제**: KT 기지국 ID별 시간대별 트래픽 추이 및 패킷 드롭률 상관관계 피벗 차트 자동 생성
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+💡 
+
+ 수식 제안 관리 & 예제 기반 패턴 수식 (Formula Suggestions) 
+ 수식 입력 즉시 최적 함수 추천 • 예제 기반 패턴 감지로 열 자동 채우기 
+
+ Excel AI Engine 
+
+ 📊 Excel Copilot KPI Pivot Prompt 
+
+ 📋 프롬프트 복사 
+
+ "'PRB_Usage' 컬럼이 85% 이상이면서 'Drop_Rate'가 1.5%를 초과하는 과부하 기지국만 필터링하는 새 열을 추가하고, 기지국 ID별 시간대별 트래픽 추이를 피벗 차트로 생성해줘."
+
+------------------------------------------------------------
+
+### [Unit 26] 백본 트래픽 이상 감지와 Z-Score 분산 분석
+- **분류 태그**: `EXCEL • HANDS-ON 2-1` | **솔루션**: `Microsoft Excel`
+- **핵심 부제**: KT 코어망 통계적 이상치를 자동으로 색출하여 잠재적 DDoS 공격 및 백홀 병목 원인 규명
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+⚡ Z-Score Anomaly Detection 
+
+ 📋 프롬프트 복사 
+
+ "최근 30일간의 백홀 트래픽 데이터를 바탕으로 Z-Score가 +2.5 이상인 이상 트래픽 발생 구간을 빨간색 조건부 서식으로 강조하고, 사용자 접속자 수(UE) 급증과의 상관관계를 분석해줘."
+
+------------------------------------------------------------
+
+### [Unit 27] 회선 증설 예측 시뮬레이션 (Python in Excel)
+- **분류 태그**: `EXCEL • HANDS-ON 2-2` | **솔루션**: `Microsoft Excel & Python`
+- **핵심 부제**: KT 트래픽 급증 국사 대상 대역폭 증설 시나리오별 패킷 지연율(Latency) 시뮬레이션 구동
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+Python in Excel 
+
+##### 상관계수 히트맵 시각화
+
+ "기지국 접속자 수, 패킷 지연 시간(RTT), 다운로드 처리량 간의 상관관계를 파이썬 seaborn heatmap으로 시각화하여 현재 시트의 G2 셀에 삽입해줘."
+
+ Simulation 
+
+##### What-If 대역폭 증설 시뮬레이션
+
+ "백홀 대역폭을 10Gbps에서 20Gbps로 확장 시 피크타임 패킷 지연이 몇 % 개선되는지 파라미터 변동 모델링을 실행해줘."
+
+------------------------------------------------------------
+
+### [Unit 28] 정답을 부르는 엑셀 프롬프트 작성 원칙
+- **분류 태그**: `EXCEL • CHEAT SHEET` | **솔루션**: `Microsoft Excel`
+- **핵심 부제**: 구체적 목표, 정확한 열 이름 지정, 점진적 구체화(Refinement) 및 사용자 검증(Check) 원칙
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+##### ✅ 정답을 부르는 4대 프롬프트 원칙
+
+ ☑ 구체적인 목표 설정 (두루뭉술한 질문 X) 
+ ☑ 정확한 열 이름 / 범위 명시 
+ ☑ 포괄적 질문 후 점진적 구체화 (Refinement) 
+ ☑ 이전 결과를 바탕으로 추가 질문 (Context 유지) 
+
+ ⚠️ 엔지니어 주의사항 (Check!) 
+
+ 생성된 수식과 계산 결과는 항상 원본 비즈니스 로직과 일치하는지 엔지니어의 최종 검증(Validation)이 필수적입니다.
+
+------------------------------------------------------------
+
+### [Unit 29] Word Copilot 엔지니어링 5대 핵심 비법
+- **분류 태그**: `WORD • 5 MAGIC SECRETS` | **솔루션**: `Microsoft Word`
+- **핵심 부제**: KT 통신 표준 문서, 긴급 점검 보고서, 제안서 작성을 위한 5가지 실무 작성 비법
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+1. 초안 생성 (Draft) 
+
+ 백지 상태 탈출, /files 최대 20개 사내 파일 동시 참조 
+
+ 2. 문장 다듬기 (Rewrite) 
+
+ 전문 엔지니어링 어조 전환, 줄글의 정형 표(Table) 변환 
+
+ 3. 요약 & 모바일 
+
+ 200단어 상단 자동 요약, 현장 마이크 음성 메모 보고서화 
+
+ ✨ 
+ "/files KT_5G_품질보고서.xlsx 를 기반으로 통신망 긴급 점검 SOP 초안을 표 형식으로 작성해줘." 
+
+ 📋 복사
+
+------------------------------------------------------------
+
+### [Unit 30] 최대 20개 파일 참조 기반 초안 자동 생성
+- **분류 태그**: `WORD • MULTI-REFERENCE` | **솔루션**: `Microsoft Word`
+- **핵심 부제**: 막막한 백지 상태에서 최대 20개 사내 파일(/files)을 결합하여 실무형 초안 완성
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+📁 연계 실습 데이터: practice_files/KT_5G_수도권_기지국_품질지표_2026.xlsx , practice_files/KT_2026_5G망_현대화_기술보고서.docx 
+
+ 📑 Multi-File Reference Prompt 
+
+ 📋 프롬프트 복사 
+
+ "/files 'KT_5G_수도권_기지국_품질지표_2026.xlsx', 'KT_2026_5G망_현대화_기술보고서.docx' 2개 파일을 결합하여, 3분기 수도권 기지국 트래픽 집중 구역에 대한 긴급 증설 필요성을 강조하는 3페이지 엔지니어링 기안서 초안을 작성해줘."
+
+ 최대 20개 사내 파일(Office/PDF) 동시 참조 
+ SharePoint / OneDrive 권한 연동 
+ 표 및 수치 데이터 자동 인용
+
+------------------------------------------------------------
+
+### [Unit 31] 자동 다시 쓰기(Rewrite)와 정형 표 변환
+- **분류 태그**: `WORD • REWRITE & TABLE` | **솔루션**: `Microsoft Word`
+- **핵심 부제**: 어조/명확성 자동 개선, 톤앤매너 실시간 조절, 장황한 글의 정형 표(Table) 변환
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+🔄 Rewrite & Table Conversion 
+
+ 📋 프롬프트 복사 
+
+ "아래 장황하게 나열된 L3 스위치 점검 절차 줄글을 현장 엔지니어가 한눈에 파악할 수 있도록 [단계 | 점검 항목 | CLI 명령어 | 정상 기준 | 이상 시 조치] 5개 열로 구성된 직관적인 표(Table)로 변환해줘."
+
+ ❌ 변경 전 (Before): 장황한 줄글 
+ "스위치 접속 후 콘솔에서 CPU 점유율을 확인하고 80%가 넘으면 프로세스 목록을 본 후...” 
+
+ ✅ 변경 후 (After): 일목요연한 정형 표 
+ 단계별 CLI 명령어와 정상 기준치, 긴급 조치 가이드가 표 형태로 깔끔하게 정리 
+
+ 💡 실무 팁: 복잡한 운영 절차를 직관적인 표로 빠르게 재구성하되, CLI 명령어의 파라미터나 임계값 수치는 엔지니어가 반드시 최종 확인합니다.
+
+------------------------------------------------------------
+
+### [Unit 32] 문서 핵심 요약 및 심층 질의
+- **분류 태그**: `WORD • ANALYSIS & Q&A` | **솔루션**: `Microsoft Word`
+- **핵심 부제**: 긴 문서의 핵심 내용을 요약하고, 특정 내용에 대해 추가 질문하거나 해결 방안을 도출할 수 있습니다.
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+🔍 Executive Summary & Deep Q&A 
+
+ 📋 프롬프트 복사 
+
+ "이 20페이지 분량의 통신망 기술 문서를 분석해줘. 임원 보고용 Executive Summary를 약 200단어로 작성하고, 문서에서 언급된 보안 취약점 3가지와 각각의 단계별 해결 방안을 표로 정리해줘. 마지막으로 후속 조치가 필요한 Action Items 3가지를 우선순위 순으로 제안해줘."
+
+ 📌 긴 문서 핵심 내용 요약 
+ 🔍 특정 내용에 대한 심층 질의 
+ ⚡ 핵심 Action Items 3가지 도출
+
+------------------------------------------------------------
+
+### [Unit 33] 맞춤형 AI 이미지 및 테크 배너 제작
+- **분류 태그**: `WORD • AI IMAGE GEN` | **솔루션**: `Microsoft Word`
+- **핵심 부제**: 자연어 프롬프트로 보고서·프레젠테이션에 활용할 맞춤형 이미지와 배너 제작
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+🎨 Engineering Visual Prompt 
+
+ 📋 프롬프트 복사 
+
+ "KT 5G 통신망 현대화 기술 보고서의 챕터 표지용 테크 배너를 만들어줘. 기지국, 광케이블, 클라우드 기반 코어망이 연결된 미래형 통신 네트워크를 표현해줘. 미니멀한 3D 아이소메트릭 스타일, 네온 블루 계열의 색상 팔레트, 깨끗한 화이트 배경, 넓고 여백이 있는 구도로 구성해줘. 보고서의 전문적이고 기술적인 분위기에 어울리도록 디자인해줘."
+
+ ✓ 3D·아이소메트릭 스타일 활용 
+ ✓ 피사체·스타일·색상·구도 구체화 
+ ✓ 원하는 결과 맞춤 프롬프트 최적화
+
+------------------------------------------------------------
+
+### [Unit 34] 모바일 음성 메모를 정형 보고서로 변환
+- **분류 태그**: `WORD • MOBILE AUDIO` | **솔루션**: `Microsoft Word`
+- **핵심 부제**: 모바일에서 녹음·전사한 현장 메모를 Copilot으로 표준 보고서 형식에 맞게 구조화
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+🎙️ Mobile Voice to Structured Report 
+
+ 📋 프롬프트 복사 
+
+ "서버실 현장에서 녹음·전사된 이 음성 메모 텍스트를 분석하여 [점검 일시 | 점검 국사 | 랙(Rack) 번호 | 발견된 이상 증상 | 현장 조치 내역 | 후속 조치 필요사항] 형식의 현장 점검 완료 보고서로 구조화해줘. 음성 메모에 명시되지 않은 정보는 임의로 추정하지 말고 ‘확인 필요’로 표시해줘. 중복되거나 불필요한 구술 표현은 제거하고, 기술적인 내용은 원문의 의미를 유지하면서 간결하게 정리해줘."
+
+ 📱 모바일에서 현장 음성 기록 
+ ⚡ 비정형 구술 내용 분석·정리 
+ 📑 표준 보고서 양식으로 구조화
+
+------------------------------------------------------------
+
+### [Unit 35] 다중 소스 기반 통신망 긴급 증설·장애 대응 SOP 작성
+- **분류 태그**: `WORD • HANDS-ON 3-1` | **솔루션**: `Microsoft Word`
+- **핵심 부제**: Excel 분석 결과 + Word 표준 매뉴얼 + Teams 회의 내용을 결합하여 표준 작업 절차서 초안 작성
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+📄 
+
+##### Word Copilot 핵심 활용 기능 아키텍처 맵
+
+ 콘텐츠 초안 작성 • 다시 쓰기 & 구조화 • 이미지·시각 요소 • 문서 분석 & 질의 
+
+ Excalidraw Map 
+
+ ✍️ 1. 콘텐츠 초안 작성 
+
+- • 다중 소스 기반 초안 작성
+
+- • 기존 문서 기반 섹션 확장
+
+- • 목적·어조·형식 맞춤 지정
+
+ 🔄 2. 다시 쓰기 & 구조화 
+
+- • Rewrite: 문장 재작성·명확성
+
+- • 대화형 길이·표현 조정
+
+- • 텍스트를 표 형식으로 변환
+
+ 🎨 3. 이미지·시각 요소 
+
+- • 맞춤형 AI 이미지 생성
+
+- • 문서·헤더용 시각 자료 제작
+
+- • 스타일·구도·색상 팔레트 지정
+
+ 🔍 4. 문서 분석 & 질의 
+
+- • 문서 요약 및 핵심 추출
+
+- • 문서 내용 기반 질의응답
+
+- • 참조된 콘텐츠 및 근거 검증
+
+ 📄 Word Multi-Source Synthesis Prompt 
+
+ 📋 프롬프트 복사 
+
+ "첨부된 '5G_KPI_분석결과.xlsx'의 3번 시트 통계 테이블, 'L3스위치_표준매뉴얼.docx', 그리고 관련 Teams 대책 회의 내용을 종합하여 ‘수도권 코어망 긴급 증설 및 장애 대응 표준 작업 절차서(SOP)’ 초안을 작성해줘. 목적, 사전 점검사항, 장비 체크리스트, 단계별 작업 절차, 필요한 명령어, 검증 방법, 장애 발생 시 롤백 가이드를 포함한 정형화된 서식으로 구성해줘. 각 내용은 제공된 자료를 우선 근거로 작성하고, 자료에 없는 정보는 임의로 추정하지 말고 ‘확인 필요’로 표시해줘. 특히 표준 매뉴얼에 명시되지 않은 네트워크 명령어는 임의로 생성하지 말고 ‘매뉴얼 확인 필요’로 표시해줘."
+
+------------------------------------------------------------
+
+### [Unit 36] 5G 설비 투자(CAPEX) 분석 및 경영진 기안서 작성
+- **분류 태그**: `WORD • HANDS-ON 3-2` | **솔루션**: `Microsoft Word`
+- **핵심 부제**: 노후 네트워크 장비 교체에 따른 CAPEX 투자비와 향후 OPEX 절감 효과를 분석하여 경영진 기안서로 작성
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+📑 CAPEX / OPEX Investment Proposal 
+
+ 📋 프롬프트 복사 
+
+ "첨부된 '2026_장비견적서.xlsx'의 데이터를 근거로 노후 라우터 교체에 대한 경영진 제출용 설비투자 기안서 초안을 작성해줘. 초기 투자비용(CAPEX), 기존 장비와 신규 장비의 전력 소비량 차이, 유지보수 비용 차이, 향후 3년간 예상 OPEX 절감액을 계산하여 정리해줘. OPEX 절감률이 Excel 데이터에서 확인되는 경우 해당 수치를 명시하고, 확인되지 않는 경우 임의로 생성하지 말아줘. 투자비용, 연간 절감액, 3년 누적 절감액 및 투자 회수기간(Payback Period)을 표로 정리하고, 경영진이 투자 필요성을 빠르게 판단할 수 있도록 핵심 효과와 투자 근거를 요약해줘."
+
+ 📊 Excel 기반 CAPEX/OPEX 분석 
+ 💰 3년 절감액 & 회수기간 산출 
+ 📑 경영진 의사결정용 기안서 작성
+
+------------------------------------------------------------
+
+### [Unit 37] 5G SA 코어 네트워크 및 데이터 흐름 시각화
+- **분류 태그**: `WORD • HANDS-ON 3-3` | **솔루션**: `Microsoft Word & Mermaid`
+- **핵심 부제**: UE, gNodeB, AMF, SMF, UPF 간의 제어 평면(CP)과 사용자 평면(UP) 인터페이스 다이어그램 생성
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+📡 5G Standalone (SA) End-to-End Architecture 
+ 3GPP Release 16/17 
+
+ ⚡ User Plane (데이터 전달 경로) 
+
+ 📱 UE 
+ Radio ➔ 
+ 📡 gNodeB 
+ N3 (GTP-U) ➔ 
+ ⚡ UPF 
+ N6 ➔ 
+ 🌐 DN (Data Net) 
+
+ 🛡️ 단말/기지국 제어: 
+ N1(UE-AMF), N2(gNodeB-AMF) 
+
+ ⚙️ 세션 및 평면 제어: 
+ N11(AMF-SMF), N4(SMF-UPF) 
+
+ ✨ 3GPP Standard Topology Generation Prompt 
+
+ 📋 프롬프트 복사 
+
+ "5G 단독모드(SA) 구조에서 UE, gNodeB, AMF, SMF, UPF 및 Data Network(DN) 간의 제어 평면과 사용자 평면 데이터 흐름을 Mermaid flowchart 문법으로 작성해줘. N1(UE-AMF), N2(gNodeB-AMF), N3(gNodeB-UPF), N4(SMF-UPF), N6(UPF-DN), N11(AMF-SMF) 인터페이스를 각각 정확하게 라벨링하고, 제어 평면(Control Plane)과 사용자 평면(User Plane)을 구분해서 표현해줘. 각 인터페이스의 연결 대상이 3GPP 5G SA 표준 구조와 일치하는지 확인해줘."
+
+------------------------------------------------------------
+
+### [Unit 38] 실무에 바로 쓰는 Word Copilot 프롬프트 모음
+- **분류 태그**: `WORD • CHEAT SHEET` | **솔루션**: `Microsoft Word`
+- **핵심 부제**: 백지일 때, 글이 어색할 때, 시간이 없을 때 바로 활용하는 실무 프롬프트
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+상황 1. 백지일 때 (초안 생성) 
+ "첨부된 [파일이름]을 참고하여 [주제]에 대한 초안을 작성해줘." 
+
+ 복사 
+
+ 상황 2. 글이 어색할 때 (비즈니스 문체 재작성) 
+ "이 문단을 전문적이고 명확한 비즈니스 문체로 다시 작성해줘. 기술적 의미는 유지하고, 중복 표현과 불필요하게 장황한 문장은 줄여줘." 
+
+ 복사 
+
+ 상황 3. 시간이 없을 때 (요약 및 액션 아이템 구조화) 
+ "이 문서의 핵심 내용을 5줄 이내로 요약하고, 담당자별 Action Items를 [담당자 | 할 일 | 기한] 형식의 표로 정리해줘. 문서에 없는 정보는 임의로 추정하지 말고 ‘확인 필요’로 표시해줘." 
+
+ 복사
+
+------------------------------------------------------------
+
+### [Unit 39] PowerPoint 프레젠테이션 제작 4단계 여정
+- **분류 태그**: `PPT • 4-STEP JOURNEY` | **솔루션**: `Microsoft PowerPoint`
+- **핵심 부제**: KT 임원 보고 프레젠테이션 제작을 위한 Brief → Draft → Refine → Review 프로세스
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+Step 1 
+ 1. 브리프 (Brief) 
+ 보고 목적 · 청중 · 핵심 메시지 · 분량 명확화 
+
+ Step 2 
+ 2. 초안 (Draft) 
+ 참조 문서 기반 핵심 내용 추출 · 슬라이드 초안 생성 
+
+ Step 3 
+ 3. 다듬기 (Refine) 
+ 전문가 어조 · 문장 압축 · 시각 요소 보강 
+
+ Step 4 
+ 4. 검토 (Review) 
+ 핵심 메시지 검토 · 논리 흐름 점검 · Action Items 추출 
+
+ ✨ 
+ "KT_2026_5G망_현대화_보고서.docx를 기반으로 KT 임원 의사결정을 위한 4장의 핵심 슬라이드 초안을 작성해줘. 각 슬라이드는 핵심 메시지, 주요 근거 데이터, 시각화 아이디어, 의사결정 포인트를 포함해줘. 보고서에 없는 수치나 사실은 임의로 생성하지 말고 ‘확인 필요’로 표시해줘." 
+
+ 📋 복사
+
+------------------------------------------------------------
+
+### [Unit 40] 기업 브랜드 템플릿과 자리 표시자 활용
+- **분류 태그**: `PPT • BRAND DNA` | **솔루션**: `Microsoft PowerPoint`
+- **핵심 부제**: 기업 전용 서식의 레이아웃·자리 표시자·테마를 활용하여 일관된 프레젠테이션 구성
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+1. Title & Subtitle 
+ 제목·부제목 자리 표시자가 정의된 슬라이드 레이아웃 활용 
+
+ 2. Content Cards 
+ 2단·3단 카드형 레이아웃을 활용한 콘텐츠 구조화 
+
+ 3. Brand Colors 
+ 템플릿에 정의된 브랜드 색상 및 테마 적용 
+
+ 📑 Brand Template 활용 
+
+ 📋 프롬프트 복사 
+
+ "KT_Corporate_Brand_Template.potx의 슬라이드 레이아웃과 디자인 가이드를 참고하여 본문 내용을 작성해줘. 3개의 카드형 콘텐츠 영역을 활용해 핵심 내용을 논리적으로 나누고, 각 카드의 텍스트 양이 지나치게 편중되지 않도록 구성해줘. 제목과 본문은 기존 자리 표시자의 구조와 스타일을 최대한 유지하고, 템플릿에 정의된 브랜드 색상과 시각적 스타일을 활용해줘."
+
+------------------------------------------------------------
+
+### [Unit 41] Copilot 기반 개요 및 프레젠테이션 작성
+- **분류 태그**: `PPT • OUTLINE & SLIDES` | **솔루션**: `Microsoft PowerPoint`
+- **핵심 부제**: 주제·청중·분량을 지정하여 프레젠테이션 개요와 슬라이드별 핵심 내용 및 발표자 노트 작성
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+🤖 Presentation Builder Prompt 
+
+ 📋 프롬프트 복사 
+
+ "KT 5G 코어망 가상화(vEPC에서 5GC로의 전환 전략)를 주제로 네트워크 운용팀 대상 15분 브리핑용 5장 슬라이드 개요를 작성해줘. 구성은 ① 현황 및 문제점 ② 전환 필요성 ③ 목표 아키텍처 ④ 단계별 마이그레이션 전략 ⑤ 기대효과 및 의사결정 사항 순서로 구성해줘. 각 장표마다 핵심 메시지 1개와 핵심 불릿 포인트 3개, 발표자 노트를 작성해줘."
+
+ 🎯 청중·발표 목적 맞춤 콘텐츠 
+ 📑 단계별 스토리라인 및 메시지 
+ 🎙️ 슬라이드별 발표자 노트 작성
+
+------------------------------------------------------------
+
+### [Unit 42] Word 기술 문서를 프레젠테이션으로 변환하기
+- **분류 태그**: `PPT • WORD COMPRESSION` | **솔루션**: `Microsoft PowerPoint`
+- **핵심 부제**: 수십 페이지의 기술 문서에서 핵심 내용을 추출하여 경영진용 프레젠테이션으로 재구성
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+📁 연계 실습 데이터: practice_files/KT_2026_5G망_현대화_기술보고서.docx 
+
+ 📑 Word Document to Slide Conversion 
+
+ 📋 프롬프트 복사 
+
+ "KT_2026_5G망_현대화_기술보고서.docx를 바탕으로 경영진 보고용 4장 프레젠테이션 초안을 작성해줘. 원문의 장황한 설명은 핵심 메시지와 근거 중심으로 재구성하고, [추진 배경 → 핵심 기술 → 기대 효과 → 투자 계획]의 4장 구조로 구성해줘. 각 슬라이드에는 핵심 메시지 1개와 이를 뒷받침하는 주요 내용 3~4개를 포함해줘. 문서에 없는 수치나 사실은 임의로 생성하지 말고 ‘확인 필요’로 표시해줘."
+
+ ✓ 참조 문서 기반 핵심 내용 추출 
+ ✓ 문서의 제목·섹션 구조를 활용한 슬라이드 구성
+
+------------------------------------------------------------
+
+### [Unit 43] PowerPoint 슬라이드 텍스트 다시 쓰기 4대 전략
+- **분류 태그**: `PPT • REWRITE STRATEGIES` | **솔루션**: `Microsoft PowerPoint`
+- **핵심 부제**: 텍스트 압축, 비즈니스 톤 변경, 구조화, Action 중심 재작성
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+1. Condense 
+ 복잡한 줄글을 핵심 불릿으로 압축 
+
+ 2. Professional 
+ 구어체를 전문적 비즈니스 문체로 개선 
+
+ 3. Structure 
+ 핵심 키워드 강조 및 구조화 형태로 재구성 
+
+ 4. Action-Driven 
+ Next Step과 실행 과제를 명확하게 정리 
+
+ 🔄 Slide Text Refinement 
+
+ 📋 프롬프트 복사 
+
+ "이 슬라이드의 텍스트를 핵심 내용 중심으로 60단어 이내로 압축해줘. 핵심 키워드는 굵게 강조하고, 불필요한 중복 표현을 제거해줘. 청중이 슬라이드를 빠르게 훑어도 핵심 결론을 파악할 수 있도록 간결한 불릿 중심으로 다시 작성해줘. 원문의 의미와 수치는 변경하지 말아줘."
+
+------------------------------------------------------------
+
+### [Unit 44] AI 슬라이드 이미지 프롬프트 작성법 (Bad vs Good)
+- **분류 태그**: `PPT • AI IMAGE PROMPT` | **솔루션**: `Microsoft PowerPoint`
+- **핵심 부제**: 추상적인 표현보다 피사체·스타일·색상·조명·구도·배경을 구체적으로 지정
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+BAD CASE ❌ 
+
+##### 추상적이고 모호한 프롬프트
+
+ "멋진 미래지향적 5G 네트워크 기지국 이미지 만들어줘"
+
+- • 원하는 스타일과 구도를 통제하기 어려움
+
+- • 과도한 SF 요소나 비현실적 표현 포함 가능성
+
+- • 기업 보고서에 적합한 비주얼 통제 어려움
+
+ 목적에 맞는 시각적 정보 부족 
+
+ GOOD CASE ✅ 
+
+##### 피사체·스타일·색상·조명·구도 명시
+
+ "Isometric 3D illustration of a 5G gNodeB telecom tower connected to a modern data center, clean enterprise technology aesthetic, blue and white color palette, soft studio lighting, white background, wide composition, suitable for a corporate presentation."
+
+- • 구체적인 피사체와 연결 관계 명시
+
+- • 스타일·색상·조명·화이트 배경 지정
+
+- • 슬라이드 배치에 적합한 구도와 여백 확보
+
+ 기업 프레젠테이션 최적화 품질 
+
+ 💡 핵심 원칙: 좋은 이미지 프롬프트 = 피사체 + 스타일 + 색상 + 조명 + 배경 + 구도 + 용도
+
+------------------------------------------------------------
+
+### [Unit 45] 대용량 프레젠테이션에서 핵심 슬라이드 선별
+- **분류 태그**: `PPT • SELECTIVE EXTRACTION` | **솔루션**: `Microsoft PowerPoint`
+- **핵심 부제**: 대규모 자료에서 특정 주제와 관련된 슬라이드를 찾아 핵심 내용과 영향도를 선택적으로 추출
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+📚 Large Deck Selective Extraction 
+
+ 📋 프롬프트 복사 
+
+ "총 50장의 네트워크 장비 릴리즈 노트에서 ‘BGP 및 OSPF 프로토콜 변경점’과 관련성이 높은 핵심 슬라이드 3장을 찾아줘. 각 슬라이드의 번호와 제목을 함께 제시하고, 주요 변경 내용과 네트워크 운용에 미칠 수 있는 영향도를 각각 3줄 이내로 요약해줘. 관련 근거가 명확하지 않은 내용은 추정하지 말고 ‘확인 필요’로 표시해줘."
+
+ 🔍 주제 기반 관련 슬라이드 탐색 
+ 📌 핵심 내용·영향도 선택적 추출 
+ ⚡ 대용량 자료 검토 시간 단축
+
+------------------------------------------------------------
+
+### [Unit 46] 이동 중 전문가를 위한 모바일 음성 Q&A
+- **분류 태그**: `PPT • MOBILE Q&A` | **솔루션**: `Microsoft PowerPoint`
+- **핵심 부제**: iPhone/Android 스마트폰에서 이동 중 슬라이드 요약 확인 및 마이크 음성 질의
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+🎙️ Mobile Slide Voice Query 
+
+ 📋 프롬프트 복사 
+
+ "모바일 PowerPoint 음성 질의: '이 슬라이드 덱에서 3분기 예산 초과 위험이 있는 국사가 어디인지 찾아내고, 슬라이드 번호와 함께 수치를 읽어줘.'"
+
+ 📱 이동 중/외근 중 스마트폰 화면을 보지 않고도 음성으로 슬라이드 내용 확인 
+ ⚡ 발표 직전 대기실에서 핵심 데이터 최종 확인 최적화
+
+------------------------------------------------------------
+
+### [Unit 47] 임원 보고용 프레젠테이션 4대 슬라이드 생성
+- **분류 태그**: `POWERPOINT • HANDS-ON 4-1` | **솔루션**: `Microsoft PowerPoint`
+- **핵심 부제**: KT 통신망 현대화 보고서 Word 파일을 바탕으로 임원 의사결정용 4대 핵심 슬라이드 자동 생성
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+📑 
+
+##### PowerPoint Copilot 기능 아키텍처 맵
+
+ 에이전트 모드 • Word 문서 연동 • 액션 아이템 추출 • 대용량 자료 요약 한도 
+
+ Excalidraw Map 
+
+ 🚀 1. 에이전트 모드 
+
+- • 스타일 설정: 청중/톤 맞춤
+
+- • 개요 생성: 목차 자동 제안
+
+- • 슬라이드 빌드: 시각적 생성
+
+ 📄 2. Word 문서 연동 
+
+- • 구조 인식: 제목 스타일 파싱
+
+- • 이미지 통합: 보고서 사진 유지
+
+- • 서식 파일: 안정적 파일 용량 권장
+
+ 📑 3. 분석 & 액션 아이템 
+
+- • 핵심 요약: 글머리 기호 서머리
+
+- • 키 슬라이드: 중요 장표 식별
+
+- • Action Items: 과업 자동 추출
+
+ ⚖️ 4. 지침 및 규정 
+
+- • 요약 한도: 최대 대용량 자료
+
+- • 책임 있는 AI: RAI 원칙 준수
+
+- • 메타데이터: 출처 워터마크
+
+ 📑 PowerPoint Executive Presentation Prompt 
+
+ 📋 프롬프트 복사 
+
+ "/files '2026_통신망_현대화_보고서.docx' 파일로부터 프레젠테이션을 생성해줘. 임원 보고에 적합하도록 장황한 글을 줄이고, 핵심 성과 지표(KPI)와 타임라인을 시각적 카드로 구성해줘."
+
+------------------------------------------------------------
+
+### [Unit 48] 경영진 의사결정용 1페이지 ROI 서머리 디자인
+- **분류 태그**: `POWERPOINT • HANDS-ON 4-2` | **솔루션**: `Microsoft PowerPoint`
+- **핵심 부제**: KT 경영진이 5초 만에 핵심 투자 회수 기간과 품질 개선 지표를 파악하는 원페이지 대시보드 슬라이드
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+📁 연계 실습 데이터: practice_files/KT_5G_설비투자_CAPEX_예산안_2026.csv 
+
+ 📊 CAPEX 절감 효과 
+ -23.5% 
+ 고효율 국사 전환 
+
+ ⏱️ 장애 조치 시간(MTTR) 
+ 45분 ➔ 8분 
+ 자율 관제 에이전트 도입 
+
+ 💰 ROI 투자 회수 
+ 1.4년 달성 
+ 목표 2.0년 대비 7개월 조기 회수 
+
+ 📈 1-Page Executive Summary 
+
+ 📋 프롬프트 복사 
+
+ "/files 'KT_5G_설비투자_CAPEX_예산안_2026.csv'를 바탕으로, 임원이 10초 만에 승인 결정을 내릴 수 있도록 총투자비, 연간 절감액, 회수 기간, 리스크 요약을 1페이지 임원 보고 슬라이드로 생성해줘."
+
+------------------------------------------------------------
+
+### [Unit 49] PowerPoint 실전 치트키 마스터 가이드
+- **분류 태그**: `PPT • CHEAT SHEET` | **솔루션**: `Microsoft PowerPoint`
+- **핵심 부제**: 시작(참조 Word 문서 연동), 편집(전문가 톤/AI 이미지 생성), 검토(핵심 메시지 검토·요약) 핵심 치트키
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+1. 시작 치트키 
+ "참조 Word 문서 연동 + 슬라이드 개요 빌드" 
+
+ 시작 
+
+ 2. 편집 치트키 
+ "문장 압축(Condense) + 전문가 톤 + AI 이미지 생성 상세 피사체 묘사" 
+
+ 편집 
+
+ 3. 검토 치트키 
+ "핵심 메시지 검토·요약 + 핵심 슬라이드 3장 추출 + Action Items 정리" 
+
+ 검토
+
+------------------------------------------------------------
+
+### [Unit 50] 크로스앱 통합 엔지니어링 워크플로우
+- **분류 태그**: `MASTER PLAYBOOK • CROSS-APP` | **솔루션**: `Cross-App Master Flow`
+- **핵심 부제**: KT 엑셀 데이터 정제 ➔ 파이썬 시뮬레이션 ➔ 워드 SOP 작성 ➔ 파워포인트 임원 보고 원스톱 완성
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+1 
+
+##### Excel Copilot
+
+ 5G 대용량 로그 데이터 필터링 및 Z-Score 이상치 피벗 분석 완료 
+
+ 데이터 정제 & 추론 
+
+ 2 
+
+##### Word Copilot
+
+ 엑셀 분석 테이블을 인용하여 정형화된 원인 분석 SOP 보고서 작성 
+
+ 다중 소스 보고서 합성 
+
+ 3 
+
+##### PowerPoint Copilot
+
+ 완성된 Word 보고서로부터 1-Page 임원 의사결정 슬라이드 변환 
+
+ 의사결정 슬라이드 완성
+
+------------------------------------------------------------
+
+### [Unit 51] 비상 장애 대응 지능형 협업 룸 (War-Room)
+- **분류 태그**: `TEAMS • WAR-ROOM COLLAB` | **솔루션**: `Microsoft Teams`
+- **핵심 부제**: KT 전송망, 코어망, 무선망 엔지니어와 관제 센터가 실시간으로 공유하는 지능형 장애 복구 워룸
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+🚨 Teams War-Room Incident Bot 
+
+ 📋 프롬프트 복사 
+
+ "현재 발생한 백본 라우터 다운 이슈와 관련해 '긴급_장애조치_워룸' 채널을 생성하고, 코어망팀과 전송망팀 담당자를 자동 초대하며, 지난 1시간 동안의 경보 로그 요약본을 채널 첫 공지로 게시해줘."
+
+------------------------------------------------------------
+
+### [Unit 52] 통신 엔지니어를 위한 프롬프트 패턴 치트시트
+- **분류 태그**: `ENGINEER GUIDE • CHEAT SHEET` | **솔루션**: `Copilot Engineer Guide`
+- **핵심 부제**: KT 기지국 관제, 백본 트래픽 분석, 장애 복구 SOP, 해외 TAC 메일 작성을 위한 10대 실무 치트시트
+
+#### 📋 세부 실무 내용 & 프롬프트 가이드
+📡 망 점검 & 장애 분석 패턴 
+
+ "/files 'syslog.txt'에서 Severity 1~2 알람만 시간순으로 정렬하고 BGP Flapping 원인을 3줄 요약해줘"
+
+ 📊 통계 & 시뮬레이션 패턴 
+
+ "PRB 점유율 상위 10% 기지국의 주말 피크 트래픽 분산 효과를 파이썬 차트로 시각화해줘"
+
+ 📝 기술 제안 & 기안서 패턴 
+
+ "노후 스위치 교체 시 전력 절감량과 가용성 개선율을 강조한 경영진 제출용 1장 기안서 작성해줘"
+
+ ✉️ 글로벌 벤더 TAC 패턴 
+
+ "Cisco TAC 엔지니어에게 OSPF LSA 패킷 드롭 원인 조사를 요청하는 정중한 영문 메일 작성해줘"
+
+------------------------------------------------------------
