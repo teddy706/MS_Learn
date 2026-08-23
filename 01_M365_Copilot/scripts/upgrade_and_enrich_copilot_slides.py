@@ -6,13 +6,17 @@ html_file = 'AX_CA_Edu_GHLEE.html'
 with open(html_file, 'r', encoding='utf-8') as f:
     content = f.read()
 
-# Match slidesData
-match = re.search(r'const slidesData = (\[.*?\]);\s*let currentSlideIndex', content, re.DOTALL)
-if not match:
-    print('Failed to locate slidesData')
+start_idx = content.find('const slidesData = ')
+if start_idx == -1:
+    print('const slidesData not found')
     sys.exit(1)
 
-slides = json.loads(match.group(1))
+start_json = start_idx + len('const slidesData = ')
+end_json = content.find('let currentSlideIndex =', start_json)
+semicolon_idx = content.rfind(';', start_json, end_json)
+
+json_str = content[start_json:semicolon_idx].strip()
+slides = json.loads(json_str, strict=False)
 print(f'Original slide count: {len(slides)}')
 
 # --- 1. Unit 30 (Word Multi-Reference) ---
@@ -390,22 +394,19 @@ slides[47]['body'] = '''<div class="my-auto w-full text-left space-y-4">
     </div>
 </div>'''
 
-# Build new slidesData JSON string
-new_slides_json = json.dumps(slides, ensure_ascii=False)
+# Serialize with json.dumps
+clean_json = json.dumps(slides, ensure_ascii=False)
 
-# Replace in content
-pattern = r'const slidesData = \[.*?\];\s*let currentSlideIndex'
-replacement = f'const slidesData = {new_slides_json};\n\n        let currentSlideIndex'
-new_content = re.sub(pattern, replacement, content, flags=re.DOTALL)
+# Direct string replacement without regex
+new_content = content[:start_json] + clean_json + content[semicolon_idx:]
 
-# Also update the article HTMLs in portal view!
+# Update portal view articles
 from bs4 import BeautifulSoup
 soup = BeautifulSoup(new_content, 'html.parser')
 
 for i, slide in enumerate(slides):
     art = soup.find('article', id=f'portal-slide-{i}')
     if art:
-        # Update body div
         body_div = art.find('div', class_='my-auto py-2 text-base w-full')
         if body_div:
             body_soup = BeautifulSoup(f'<div class=\"my-auto py-2 text-base w-full\">{slide["body"]}</div>', 'html.parser')
@@ -413,7 +414,6 @@ for i, slide in enumerate(slides):
 
 new_full_html = str(soup)
 
-# Save to all relevant files
 targets = [
     'AX_CA_Edu_GHLEE.html',
     '01_M365_Copilot/AX_CA_Edu_GHLEE.html',
@@ -427,4 +427,4 @@ for target in targets:
         f.write(new_full_html)
     print(f'Successfully updated: {target}')
 
-print('All 52 slides successfully enriched and synchronized across all target files!')
+print('All 52 slides successfully enriched and synchronized!')
