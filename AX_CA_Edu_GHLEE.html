@@ -265,6 +265,10 @@
 <button class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-700 text-xs font-bold transition-colors cursor-pointer" id="fullscreenBtn" onclick="toggleFullscreen()" title="전체화면 전환 (단축키: F)">
 <span id="fullscreenIcon">⛶</span>
 </button>
+<button class="px-3 py-1.5 rounded-full border text-xs font-bold flex items-center space-x-1.5 transition-colors cursor-pointer" id="completeToggleBtn" onclick="toggleCurrentCompletion()" title="이 유닛 완료 표시 (단축키: C)">
+<span id="completeToggleIcon">☐</span>
+<span class="hidden md:inline" id="completeToggleLabel">완료 표시</span>
+</button>
 </div>
 </header>
 <!-- Main Container -->
@@ -297,6 +301,16 @@
                         ◀
                     </button>
 </div>
+</div>
+<!-- Learning Progress Summary -->
+<div class="px-3.5 md:px-4 py-2 border-b border-slate-100 bg-slate-50/60">
+    <div class="flex items-center justify-between mb-1">
+        <span class="text-2xs font-bold text-slate-600">학습 진행률</span>
+        <span class="text-2xs font-mono font-bold text-slate-700" id="progressCountLabel">0 / 52 완료</span>
+    </div>
+    <div class="w-full h-1.5 bg-slate-200 rounded-full overflow-hidden">
+        <div class="h-full bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full transition-all duration-300" id="progressBarFill" style="width: 0%"></div>
+    </div>
 </div>
 <!-- Slide List Scroll Area (All 52 items) -->
 <div class="flex-1 overflow-y-auto p-2.5 space-y-1.5" id="slideListNav">
@@ -5420,6 +5434,9 @@
                 const progress = ((index + 1) / slidesData.length) * 100;
                 progressBar.style.width = `${progress}%`;
             }
+
+            // 6. Update Learning Progress Tracking UI (completion toggle + sidebar checkmarks)
+            if (typeof updateProgressUI === 'function') updateProgressUI();
         }
 
         function renderSlideContent(index) {
@@ -5698,7 +5715,90 @@
             else if (e.key === 'f' || e.key === 'F' || e.key === 'ㄹ' || e.code === 'KeyF') {
                 toggleFullscreen();
             }
+            // Toggle Unit Completion: 'c', 'C', 'ㅊ'
+            else if (e.key === 'c' || e.key === 'C' || e.key === 'ㅊ' || e.code === 'KeyC') {
+                toggleCurrentCompletion();
+            }
         });
+
+        // ---- Learning Progress Tracking (localStorage, no server needed) ----
+        const PROGRESS_STORAGE_KEY = 'ktax_copilot_progress_v1';
+        const TRACKED_UNIT_NUMS = slidesData
+            .filter(s => s.num !== 'COVER' && s.num !== 'INDEX' && !s.num.startsWith('CH '))
+            .map(s => s.num);
+        let completedUnits = new Set();
+        try {
+            completedUnits = new Set(JSON.parse(localStorage.getItem(PROGRESS_STORAGE_KEY) || '[]'));
+        } catch (e) { completedUnits = new Set(); }
+
+        function saveProgress() {
+            try {
+                localStorage.setItem(PROGRESS_STORAGE_KEY, JSON.stringify([...completedUnits]));
+            } catch (e) { /* localStorage unavailable, fail silently */ }
+        }
+
+        function isTrackableSlide(index) {
+            const s = slidesData[index];
+            return s && TRACKED_UNIT_NUMS.includes(s.num);
+        }
+
+        function toggleCurrentCompletion() {
+            if (!isTrackableSlide(currentSlideIndex)) return;
+            const num = slidesData[currentSlideIndex].num;
+            if (completedUnits.has(num)) {
+                completedUnits.delete(num);
+            } else {
+                completedUnits.add(num);
+            }
+            saveProgress();
+            updateProgressUI();
+        }
+
+        function updateProgressUI() {
+            // 1. Toolbar toggle button reflects the current slide
+            const btn = document.getElementById('completeToggleBtn');
+            const icon = document.getElementById('completeToggleIcon');
+            const label = document.getElementById('completeToggleLabel');
+            if (btn) {
+                const trackable = isTrackableSlide(currentSlideIndex);
+                btn.style.display = trackable ? 'flex' : 'none';
+                if (trackable) {
+                    const done = completedUnits.has(slidesData[currentSlideIndex].num);
+                    btn.className = done
+                        ? 'px-3 py-1.5 rounded-full border text-xs font-bold flex items-center space-x-1.5 transition-colors cursor-pointer bg-emerald-50 border-emerald-300 text-emerald-800'
+                        : 'px-3 py-1.5 rounded-full border text-xs font-bold flex items-center space-x-1.5 transition-colors cursor-pointer bg-slate-100 border-slate-200 text-slate-600 hover:bg-slate-200';
+                    if (icon) icon.textContent = done ? '✅' : '☐';
+                    if (label) label.textContent = done ? '완료됨' : '완료 표시';
+                }
+            }
+            // 2. Sidebar progress bar + count
+            const total = TRACKED_UNIT_NUMS.length;
+            const done = TRACKED_UNIT_NUMS.filter(n => completedUnits.has(n)).length;
+            const pct = total > 0 ? Math.round((done / total) * 100) : 0;
+            const countLabel = document.getElementById('progressCountLabel');
+            const barFill = document.getElementById('progressBarFill');
+            if (countLabel) countLabel.textContent = `${done} / ${total} 완료 (${pct}%)`;
+            if (barFill) barFill.style.width = pct + '%';
+            // 3. Sidebar nav item checkmarks
+            document.querySelectorAll('.slide-nav-item[id^="nav-item-"]').forEach(item => {
+                const idx = parseInt(item.id.replace('nav-item-', ''), 10);
+                const s = slidesData[idx];
+                if (!s) return;
+                const isDone = completedUnits.has(s.num);
+                let check = item.querySelector('.progress-check-badge');
+                if (!isDone) {
+                    if (check) check.remove();
+                    return;
+                }
+                if (!check) {
+                    item.style.position = 'relative';
+                    check = document.createElement('span');
+                    check.className = 'progress-check-badge absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[9px] font-bold shadow-sm ring-2 ring-white';
+                    check.textContent = '✓';
+                    item.appendChild(check);
+                }
+            });
+        }
 
         function injectLearnLinks() {
             const svgIcon = '<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>';
