@@ -66,8 +66,9 @@
 
 ## 🏛️ 주요 파일 동기화 현황
 
-1. [`AX_CA_Edu_GHLEE.html`](file:///Users/gwanghee/Documents/110_Github/MS_Learn/AX_CA_Edu_GHLEE.html) — 메인 슬라이드 포털 (52개 전 유닛 최신 반영)
+1. [`AX_CA_Edu_GHLEE.html`](file:///Users/gwanghee/Documents/110_Github/MS_Learn/AX_CA_Edu_GHLEE.html) — 메인 슬라이드 포털, Single Source of Truth (52개 전 유닛 최신 반영)
 2. [`index.html`](file:///Users/gwanghee/Documents/110_Github/MS_Learn/index.html) — 배포 미러 (동일 동기화)
-3. [`M365_Copilot_Telecom_Master.html`](file:///Users/gwanghee/Documents/110_Github/MS_Learn/M365_Copilot_Telecom_Master.html) — 마스터 미러 (동일 동기화)
-4. [`curriculum_content_master_v2.md`](file:///Users/gwanghee/Documents/110_Github/MS_Learn/curriculum_content_master_v2.md) — 52개 유닛 전체 마스터 교재
-5. [`SLIDE_REVIEW_PROGRESS_2026.md`](file:///Users/gwanghee/Documents/110_Github/MS_Learn/SLIDE_REVIEW_PROGRESS_2026.md) — 본 검토 내역서
+3. [`curriculum_content_master_v2.md`](file:///Users/gwanghee/Documents/110_Github/MS_Learn/curriculum_content_master_v2.md) — 52개 유닛 전체 마스터 교재
+4. [`SLIDE_REVIEW_PROGRESS_2026.md`](file:///Users/gwanghee/Documents/110_Github/MS_Learn/SLIDE_REVIEW_PROGRESS_2026.md) — 본 검토 내역서
+
+> ℹ️ `M365_Copilot_Telecom_Master.html`은 최신 반영이 누락된 레거시 미러본으로 2026-08-24 정리 작업에서 제거되었습니다. 최신 포털은 `AX_CA_Edu_GHLEE.html` / `index.html` 단일 소스를 사용하세요.
