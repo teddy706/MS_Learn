@@ -1,42 +1,24 @@
-# Microsoft Learn & KT AX AI 교육 프로젝트 통합 포털
+# 📘 01. Microsoft 365 Copilot 통신 엔지니어링 과정
 
-이 저장소는 **KT 코어/전송망 엔지니어를 위한 Microsoft 365 Copilot 실무 마스터 교육 포털**과 Microsoft Learn 자격 과정(AB-100, AI-103)의 학습 자료를 체계적으로 관리합니다.
-
----
-
-## 🚀 빠른 시작 & 메인 포털
-- **[AX_CA_Edu_GHLEE.html](AX_CA_Edu_GHLEE.html)** / **[index.html](index.html)**: 58-Slide FHD 인터랙티브 교육 포털 (Slide 모드 & Portal 연속 스크롤 모드 지원)
+이 폴더는 KT 코어/전송망 엔지니어를 위한 **Microsoft 365 Copilot 실무 마스터 교육 과정**의 실습 리소스(실습 데이터셋, 이미지, 빌드/검증 스크립트)를 관리합니다.
 
 ---
 
-## 📂 디렉토리 구조 및 핵심 파일
+## 🖥️ 메인 슬라이드 포털 & 마스터 교재 (Single Source of Truth)
+슬라이드 포털과 마스터 교재 텍스트는 프로젝트 **루트 1곳에서만** 관리합니다. 이 폴더에는 중복 사본을 두지 않습니다.
 
-```
-d:/AGY_Project/MS_Learn/
-├── AX_CA_Edu_GHLEE.html                     # [MAIN] 메인 인터랙티브 슬라이드 포털 (58 슬라이드)
-├── index.html                               # 루트 웹 포털 (AX_CA_Edu_GHLEE.html 동기화)
-├── Copilot_Lecture_Master_Plan.md           # 강의 마스터 기획서 (4 Chapters, 52 Units, 7 Hours)
-├── curriculum_content_master_v2.md          # 52개 유닛 전체 텍스트 & 실습 가이드
-├── 01_M365_Copilot/                         # M365 Copilot 전용 교재 및 실습 자료
-│   ├── assets/                              # 고화질 3D Copilot 및 MS 공식 앱 아이콘
-│   ├── practice_files/                      # KT 통신망 실전 실습 데이터셋 (6종 CSV/MD/Log)
-│   │   ├── KT_2026_5G망_현대화_기술보고서.md
-│   │   ├── KT_5G_설비투자_CAPEX_예산안_2026.csv
-│   │   ├── KT_5G_수도권_기지국_품질지표_2026.csv
-│   │   ├── KT_Cisco_Nokia_TAC_장애로그.txt
-│   │   ├── KT_L3스위치_비상점검_표준작업절차서_SOP.md
-│   │   └── KT_코어망_백본_트래픽_이상로그_2026.csv
-│   ├── scripts/                             # 빌드, 검증, 동기화 스크립트 모음
-│   │   ├── rebuild_enhanced_chapter_dividers.py
-│   │   ├── verify_slides.py
-│   │   └── export_all_synced_files.py
-│   ├── curriculum_content_master_v2.md
-│   ├── curriculum_content_readable.md
-│   └── Copilot_Lecture_Master_Plan.md
-├── 02_AB-100_Agentic_AI/                    # AB-100 과정 안내
-├── 03_AI-103_Azure_AI_Agents/               # AI-103 과정 안내
-└── 04_MS_Learn_Resources/                  # 공통 MS Learn 링크 및 리소스
-```
+- **메인 슬라이드 포털**: [`../AX_CA_Edu_GHLEE.html`](../AX_CA_Edu_GHLEE.html) / [`../index.html`](../index.html)
+- **강의 마스터 기획서**: [`../Copilot_Lecture_Master_Plan.md`](../Copilot_Lecture_Master_Plan.md)
+- **52개 유닛 전체 마스터 텍스트**: [`../curriculum_content_master_v2.md`](../curriculum_content_master_v2.md)
+
+---
+
+## 📂 이 폴더의 구성
+
+1. **`curriculum_content_readable.md`** : 52개 유닛 마스터 텍스트의 읽기 편한 축약/정리 버전
+2. **`practice_files/`** : 실습 예제 6종 데이터셋 (CSV, MD, Log) — 루트 `practice_files/`와 동일 파일이 동기화되어 있습니다
+3. **`scripts/`** : 슬라이드 빌드·검증·텍스트 동기화용 파이썬 유틸리티 모음
+4. **`assets/` & `images/`** : 공식 오피스 브랜드 아이콘, 3D Copilot 이미지, 아키텍처 다이어그램
 
 ---
 

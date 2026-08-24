@@ -17,9 +17,9 @@ d:/AGY_Project/MS_Learn/
 ├── index.html                               # 루트 웹 포털 (AX_CA_Edu_GHLEE.html 동기화)
 ├── Copilot_Lecture_Master_Plan.md           # 강의 마스터 기획서 (4 Chapters, 52 Units, 7 Hours)
 ├── curriculum_content_master_v2.md          # 52개 유닛 전체 텍스트 & 실습 가이드
-├── 01_M365_Copilot/                         # M365 Copilot 전용 교재 및 실습 자료
+├── 01_M365_Copilot/                         # M365 Copilot 실습 자료 (교재 텍스트는 루트 파일 참조, 중복 보관 안 함)
 │   ├── assets/                              # 고화질 3D Copilot 및 MS 공식 앱 아이콘
-│   ├── practice_files/                      # KT 통신망 실전 실습 데이터셋 (6종 CSV/MD/Log)
+│   ├── practice_files/                      # KT 통신망 실전 실습 데이터셋 (6종 CSV/MD/Log, 루트와 동기화)
 │   │   ├── KT_2026_5G망_현대화_기술보고서.md
 │   │   ├── KT_5G_설비투자_CAPEX_예산안_2026.csv
 │   │   ├── KT_5G_수도권_기지국_품질지표_2026.csv
@@ -30,9 +30,7 @@ d:/AGY_Project/MS_Learn/
 │   │   ├── rebuild_enhanced_chapter_dividers.py
 │   │   ├── verify_slides.py
 │   │   └── export_all_synced_files.py
-│   ├── curriculum_content_master_v2.md
-│   ├── curriculum_content_readable.md
-│   └── Copilot_Lecture_Master_Plan.md
+│   └── curriculum_content_readable.md       # 마스터 교재의 읽기 편한 축약 버전
 ├── 02_AB-100_Agentic_AI/                    # AB-100 과정 안내
 ├── 03_AI-103_Azure_AI_Agents/               # AI-103 과정 안내
 └── 04_MS_Learn_Resources/                  # 공통 MS Learn 링크 및 리소스
