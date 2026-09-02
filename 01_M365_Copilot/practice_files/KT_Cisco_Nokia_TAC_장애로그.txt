@@ -1,3 +1,0 @@
-[SYS-LOG] 2026-03-01 14:10:15 BBR-HY-01 TenGigE0/1/0: %ROUTING-BGP-3-ADJCHANGE: neighbor 10.240.12.1 Down - Peer closed connection
-[SYS-LOG] 2026-03-01 14:10:18 BBR-HY-01 TenGigE0/1/0: %PKT_INF-3-LINE_ERR: Excessive frame drop rate 4.8% on ASIC_BLOCK_3
-[SYS-LOG] 2026-03-01 14:10:20 BBR-HY-01 Kernel-Panic: CPU buffer overflow during BGP table full-mesh recalculation

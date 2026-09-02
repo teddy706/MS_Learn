@@ -1,0 +1,23 @@
+2026-08-25 01:12:03 BBR-HY-01 %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 10.10.1.5 started
+2026-08-25 01:14:41 BBR-HY-01 %LINEPROTO-5-UPDOWN: Line protocol on Interface TenGigE0/1/0, changed state to up
+2026-08-25 01:20:09 EDGE-SW-12 %SYS-5-CONFIG_I: Configured from console by admin
+2026-08-25 01:31:55 BBR-HY-01 %SNMP-5-COLDSTART: SNMP agent on host BBR-HY-01 is undergoing a cold start
+2026-08-25 01:44:02 BBR-HY-02 %LINK-5-CHANGED: Interface TenGigE0/2/0, changed state to administratively down
+2026-08-25 02:14:11 BBR-HY-01 %ROUTING-BGP-1-ALERT: Neighbor 10.240.12.1 exceeded max prefix limit, session reset imminent
+2026-08-25 02:14:15 BBR-HY-01 %ROUTING-BGP-2-CRITICAL: neighbor 10.240.12.1 Down - BGP Notification sent (Cease/Max Prefix)
+2026-08-25 02:14:18 BBR-HY-01 %PKT_INF-3-LINE_ERR: Excessive frame drop rate 4.8% on ASIC_BLOCK_3
+2026-08-25 02:14:22 BBR-HY-01 %ROUTING-BGP-1-ALERT: neighbor 10.240.12.1 Up - session re-established
+2026-08-25 02:16:07 BBR-HY-01 %ROUTING-BGP-2-CRITICAL: neighbor 10.240.12.1 Down - Peer closed connection
+2026-08-25 02:16:40 BBR-HY-01 %ROUTING-BGP-1-ALERT: neighbor 10.240.12.1 Up - session re-established
+2026-08-25 02:19:52 BBR-HY-01 %ROUTING-BGP-2-CRITICAL: neighbor 10.240.12.1 Down - Hold timer expired
+2026-08-25 02:20:31 BBR-HY-01 %ROUTING-BGP-1-ALERT: neighbor 10.240.12.1 Up - session re-established
+2026-08-25 02:25:14 BBR-HY-01 %SYS-4-WARNING: CPU utilization 78% for 5 min (threshold 75%)
+2026-08-25 02:27:03 BBR-HY-01 %ROUTING-BGP-2-CRITICAL: neighbor 10.240.12.1 Down - Peer closed connection
+2026-08-25 02:27:44 BBR-HY-01 %ROUTING-BGP-1-ALERT: neighbor 10.240.12.1 Up - session re-established
+2026-08-25 02:33:19 EDGE-SW-12 %LINK-5-CHANGED: Interface Gi0/12, changed state to up
+2026-08-25 02:41:08 BBR-HY-01 %ROUTING-BGP-2-CRITICAL: neighbor 10.240.12.1 Down - Peer closed connection
+2026-08-25 02:41:50 BBR-HY-01 %ROUTING-BGP-1-ALERT: neighbor 10.240.12.1 Up - session re-established
+2026-08-25 02:45:00 BBR-HY-01 %SYS-6-LOGGINGHOST_STARTSTOP: periodic heartbeat log
+2026-08-25 02:58:37 BBR-HY-01 %ROUTING-BGP-2-CRITICAL: neighbor 10.240.12.1 Down - Peer closed connection
+2026-08-25 02:59:12 BBR-HY-01 %ROUTING-BGP-1-ALERT: neighbor 10.240.12.1 Up - session re-established
+2026-08-25 03:05:00 BBR-HY-01 %SYS-5-CONFIG_I: Configured from console by netops
